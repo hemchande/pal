@@ -1,0 +1,335 @@
+[
+  {
+    "name": "Reeves County",
+    "address": "Fire affected area",
+    "type": "county",
+    "lat": 31.732971428571428,
+    "lon": -103.82415999999999,
+    "aqi": 54,
+    "category": "Moderate air quality",
+    "dominant_pollutant": "o3",
+    "pollutants": [],
+    "evacuation_locations": [
+      {
+        "name": "Target Hospitality- Mentone Lodge",
+        "address": "991 County Road 300, Mentone",
+        "type": "lodging",
+        "lat": 31.7360164,
+        "lon": -103.61179,
+        "aqi": 55,
+        "category": "Moderate air quality",
+        "dominant_pollutant": "o3",
+        "route": {
+          "polyline": "c~t`EzuuxRfAVvAb@zCpAZP^ZXXlB_BrJaIbEgDz\\wXxR_Pzy@yq@xh@ac@`zAmmAfYqU|DeD|AyAzBaCbBqB~AyBjBqCvAiC~A_Df@mA|A{DbAaDhA_E^cBnE_UpLcm@xNmt@r^gjBfEgTnCsNbBgIxCeOrIcc@nKmi@dHe^|VgpAlOov@lKci@tPsz@|Nou@tIec@~Okx@nDuQnBeJ`BeIjA{En@qB~@qBjAwBy@c@aC{AaBaAWKe@Q}BaAyAo@oPwGeFsB{UoJe`@sOkOeG{BgA}BqAiIiF_t@ge@_`BwdAk_@mVgr@yc@qIuFuDeC{A_AsCcB{CsBuCwBGG}@nAWl@yFjIsCdEeBfCk@j@k@\\o@Xo@NcAD_AEeAU{A_@}Cw@m@ScAk@gCsCsByBs@{@Q]Oa@QgAMcAe@JmARgDp@}QnD}JjByNtCkYtFaZzF_c@nIaJfB",
+          "distance_km": 33.625,
+          "duration_min": 23.35,
+          "steps": [
+            "Head <b>south</b> toward <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>TX-302 E</b>",
+            "Turn <b>left</b> onto <b>W Mentone Byp</b>",
+            "Turn <b>left</b> onto <b>Co Rd 300</b>"
+          ]
+        }
+      },
+      {
+        "name": "RV Orla",
+        "address": "8 County Road 433, Orla",
+        "type": "lodging",
+        "lat": 31.7272647,
+        "lon": -103.8217903,
+        "aqi": 54,
+        "category": "Moderate air quality",
+        "dominant_pollutant": "o3",
+        "route": {
+          "polyline": "c~t`EzuuxRfAVvAb@zCpAZP^ZXXlB_BrJaIbEgDzGsFvAiAa@i@c@{Cc@cDCO",
+          "distance_km": 1.162,
+          "duration_min": 2.8833333333333333,
+          "steps": [
+            "Head <b>south</b> toward <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>Co Rd 433</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+          ]
+        }
+      },
+      {
+        "name": "Corporate Hospitality Housing - Orla",
+        "address": "7 County Road 433, Orla",
+        "type": "lodging",
+        "lat": 31.7267194,
+        "lon": -103.8220081,
+        "aqi": 54,
+        "category": "Moderate air quality",
+        "dominant_pollutant": "o3",
+        "route": {
+          "polyline": "c~t`EzuuxRfAVvAb@zCpAZP^ZXXlB_BrJaIbEgDzGsFvAiAa@i@c@{CWkB",
+          "distance_km": 1.127,
+          "duration_min": 2.8,
+          "steps": [
+            "Head <b>south</b> toward <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>Co Rd 433</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      },
+      {
+        "name": "OHSI Medical Clinic",
+        "address": "9201 Texas 302, Mentone",
+        "type": "hospital",
+        "lat": 31.693571,
+        "lon": -103.6077234,
+        "aqi": 55,
+        "category": "Moderate air quality",
+        "dominant_pollutant": "o3",
+        "route": {
+          "polyline": "c~t`EzuuxRfAVvAb@zCpAZP^ZXXlB_BrJaIbEgDz\\wXxR_Pzy@yq@xh@ac@`zAmmAfYqU|DeD|AyAzBaCbBqB~AyBjBqCvAiC~A_Df@mA|A{DbAaDhA_E^cBnE_UpLcm@xNmt@r^gjBfEgTnCsNbBgIxCeOrIcc@nKmi@dHe^|VgpAlOov@lKci@tPsz@|Nou@tIec@~Okx@nDuQnBeJ`BeIjA{En@qB~@qBjAwBy@c@aC{AaBaAWKe@Q}BaAyAo@oPwGeFsB{UoJe`@sOkOeG{BgA}BqAiIiF_t@ge@_`BwdAo{@sj@",
+          "distance_km": 28.3,
+          "duration_min": 18.933333333333334,
+          "steps": [
+            "Head <b>south</b> toward <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>US Hwy 285 S</b>",
+            "Turn <b>left</b> onto <b>TX-302 E</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      },
+      {
+        "name": "XstremeMD",
+        "address": "Orla MMU, 4283, US Highway 285, Orla",
+        "type": "hospital",
+        "lat": 31.8956699,
+        "lon": -103.9596792,
+        "aqi": 54,
+        "category": "Moderate air quality",
+        "dominant_pollutant": "o3",
+        "route": {
+          "polyline": "c~t`EzuuxRfAVvAb@zCpAZP^ZXXy@p@sB`BsEvDsK`Jc@ZiGbF{CbCuFtEwBdB{CdCgBtBiG`Fc@\\qKzI_JlHwOlMmI`H{k@te@yNrLy@p@qIfH}CjCuC|BUF}DzCcEhDiEjDcC|BOVcFdE[V{StPoMvKqLrJiOzLaRnOaMbKeKpIuK~I}BnBuUnRuJ`IqR|O_]|XiNdLwFzEkCzBwHnGeN`Lw[vWk[pWsNnLeJbHK?cAx@iA|@mBzAeAx@[XCPoA`AeBvAcDdCwK`JaBpA{K~IgBjAcObJmRjLoQxK}InF}MnI}DbCwPdKuQzKiAp@}L|HeV~Nih@p[{{@`i@kPhKuEvCaHjEmC~AiFrCaMtHwe@zYy]hT",
+          "distance_km": 22.353,
+          "duration_min": 16.1,
+          "steps": [
+            "Head <b>south</b> toward <b>US Hwy 285 S</b>",
+            "Turn <b>right</b> onto <b>US Hwy 285 N</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Ellis County",
+    "address": "Fire affected area",
+    "type": "county",
+    "lat": 32.45714666666666,
+    "lon": -97.03975833333334,
+    "aqi": 73,
+    "category": "Good air quality",
+    "dominant_pollutant": "pm10",
+    "pollutants": [],
+    "evacuation_locations": [
+      {
+        "name": "Best Western Plus Duncanville Dallas",
+        "address": "922 East Highway 67, Duncanville",
+        "type": "lodging",
+        "lat": 32.6419294,
+        "lon": -96.888589,
+        "aqi": 75,
+        "category": "Good air quality",
+        "dominant_pollutant": "pm10",
+        "route": {
+          "polyline": "mnbeEhahoQ?QG[]CErCAh@ChDEVGLMH_@?y@EWIQMc@{@kC{Gq@wBWw@E[UmBsA}CwAuDkCcHIaAB[HY^g@RKJAzJqFlCyAZYZQ@eBFgFHmGB{BsLGwHBqJU_FCwA@m@IaAwCeC{GOc@wAyDy@_COKOUcAkBiAcCm@}ASQeAmD[cAsDyLqByGiDcLaBeFgAgC_BwCaAuA}@iAoAsAu@q@}BeB_B_A_Bu@sAg@_Co@}Bg@cAQ}@II?aBAcE?gE?yGAcF?mACuAIwAO_AOsAYsA_@{@YeBs@kAo@}AaAyAiAcA_AaAeAs@}@u@gAeAcBqAoC}AkEiIuVcQuh@u@kBm@uAs@uAaAcBiAcBy@gAw@_A{B{BgAcA}BcBeCyAwCwAk@WiBi@iCu@uCy@{GqBcDmAcDsAcDoAqCaAgHwByLkDmUuGyK{CwJcCiJyB}Cw@iGcByK_DmN}DmOkEsCy@sCo@aC_@sAOmAKgDQyACwA@{CF_GNyJVaGHaEDmJD_OH_LFcCAyAEmBKgCUoDi@qAYgBe@mC}@oAe@qCoAiJgEkIwDwOgHwHkD_CgAmAi@aDcAwCy@aCi@yEcAaBa@qBo@{CiAsCoAaLeFcF_CuBiA}AaAo@a@}@o@{AmAo@e@kCeCeBgBcBsB{AqBqCyDeFgH}AwBkCeDcFqFsMkNyCcDoEuEkEyDyHoGuCcCsDgDuDuD{BcCmBsBmQmRgXsYwHkImEsE}F_GkCcCmDaDcD_DeDeDuEcFwT}UmE{EmCwC}CaDoCyCqFoG}FqHiH}JaKmNkFcGoH_IqVyWmJeKqNmOmNgOkI_JiCoCqCwCQo@Y_@mC_DsA}AcAgAWYIWc@e@q@u@eAgAeCiCeAiA_BkBaC{CqCkDqC{CsC{C_AcAsAqA{CuCc@a@mAmAn@}@r@cAVVh@[",
+          "distance_km": 27.513,
+          "duration_min": 23.5,
+          "steps": [
+            "Head <b>east</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Continue straight",
+            "Turn <b>left</b>",
+            "Turn <b>left</b> onto <b>Ward Rd</b>",
+            "Turn <b>right</b> onto <b>Hwy 67</b>",
+            "Take the ramp on the <b>left</b> onto <b>US-67 N</b>",
+            "Continue straight to stay on <b>US-67 N</b>",
+            "Take the exit toward <b>Cockrell Hill Rd</b>",
+            "Merge onto <b>E Hwy 67</b>",
+            "Turn <b>right</b> onto <b>Garland</b>",
+            "Turn <b>right</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      },
+      {
+        "name": "Holiday Inn Express & Suites Arlington (I-20-Parks Mall) by IHG",
+        "address": "1721 Pleasant Place, Arlington",
+        "type": "lodging",
+        "lat": 32.6784282,
+        "lon": -97.13705180000001,
+        "aqi": 75,
+        "category": "Good air quality",
+        "dominant_pollutant": "pm25",
+        "route": {
+          "polyline": "mnbeEhahoQ?QG[]CErCAh@ChDEVGLMH_@?y@EWIQMc@{@kC{Gq@wBWw@E[UmBsA}CwAuDkCcHIaAB[HY^g@RKJAzJqFlCyAZYZQ@eBFgFHmGB{BsLGwHBqJU_FCwA@m@IaAwCeC{GOc@mJwWc@sA{FgRg@yAq@aCsCoJwBcHu@{B_@}@Q]o@gAaAsAkBoBqAmAeDgCm@_@}@e@IMSMQQW]Sa@Wo@Ko@Aa@@g@Jc@Xi@^_@\\MZE`@@RDXJPLLRVh@Jd@Bn@Eh@M`@QXSVGRkCfCaE~D}DlEoCdDSVgDhEiK~MaDbEmF~GkCdEuAfCeBnD}@vByCvIuDvKq@rB_FvNwCrIUx@gDvJoApDuD`LwEdNiBvEoB`EcCdEoGxJeEzFq@|@_CvC}CbEk@t@qAlBm@dAsBbD{A|Ba@p@mEzGwElHwHrLmNnT_U|]iWz`@{BrD{DvHcJtQ[n@MVeApBwA`C_B~BU\\Y`@_AlAyA~AeCzCsCbEq@nAiAdCo@dBi@~A{@rCeB|FmCbJ{BjFkCjFi@dAOTGFcCbFwLhVcE~HgF~JcFtJaCvD{BtCi@p@aBbBkAfA_BvA_ChB}DjC}DtBk@V}@^}CjA}IzCoOnFiPtF_InCuQjGuIxCiQfGwc@nOcDhAuBp@g@Rm@R_Bj@wG|BoC~@wG|BqFjBiC~@_CdAiDhB}@f@q@f@mChByAjAoBdBeChCiAnA}ApB{@lAwC`EuDdFeIdLaT`ZuOpTiJfMmBdC}AfBwCxCmCxBoG`FeIjG}QrN}f@|_@}u@jl@a}AvlAk`@pZwDnCmErCqC`BeLxGsWnO}P~J{S~LgYrPgG~DwDrC}DfDiVtS_OdMwa@z]cFxDiGjF{B~BcEhFiEtFg@p@I?A?eA|@u@d@k@Ru@L_AD{@G}@Ui@Wk@a@UUY]Wa@c@_AaBwGQIs@qDi@iCqBgKaBmI}BoL_A_FcAsGkAkJw@_IMeBg@uHKyCKqDMeGA_C?cGHsILiF^uKd@}LrAw]~@_Wl@{OPmFNwKDcHHgKFgK@uBNWBi@Bs@JyBZoDLyBFaCBkF@kB@c@o@?wCEwCAuA@kDA{@AK?OKMKGGMW?aDDiS@aKBmFDuD@iAEiBYeC]mASs@c@aAO]o@wA[s@c@eA]uAKk@ACP@F?BFRHXDn@?",
+          "distance_km": 41.315,
+          "duration_min": 33.516666666666666,
+          "steps": [
+            "Head <b>east</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Continue straight",
+            "Turn <b>left</b>",
+            "Turn <b>left</b> onto <b>Ward Rd</b>",
+            "Turn <b>right</b> onto <b>Hwy 67</b>",
+            "Keep <b>left</b> to stay on <b>Hwy 67</b>, follow signs for <b>US-287 N</b>",
+            "Merge onto <b>US-287 N</b> via the ramp to <b>Fort Worth</b>",
+            "Take the exit onto <b>I-20 E</b>",
+            "Take exit <b>448</b> for <b>Bowen Rd</b>",
+            "Take the ramp to <b>S Bowen Rd</b>",
+            "Turn <b>left</b> onto <b>S Bowen Rd</b>",
+            "Turn <b>right</b> onto <b>W Pleasant Ridge Rd</b>",
+            "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      },
+      {
+        "name": "Holiday Inn Express & Suites Mansfield by IHG",
+        "address": "201 U.S. 287 Frontage Road, Mansfield",
+        "type": "lodging",
+        "lat": 32.5696314,
+        "lon": -97.11978330000001,
+        "aqi": 76,
+        "category": "Good air quality",
+        "dominant_pollutant": "pm10",
+        "route": {
+          "polyline": "mnbeEhahoQ?QG[]CErCAh@ChDEVGLMH_@?y@EWIQMc@{@kC{Gq@wBWw@E[UmBsA}CwAuDkCcHIaAB[HY^g@RKJAzJqFlCyAZYZQ@eBFgFHmGB{BsLGwHBqJU_FCwA@m@IaAwCeC{GOc@mJwWc@sA{FgRg@yAq@aCsCoJwBcHu@{B_@}@Q]o@gAaAsAkBoBqAmAeDgCm@_@}@e@IMSMQQW]Sa@Wo@Ko@Aa@@g@Jc@Xi@^_@\\MZE`@@RDXJPLLRVh@Jd@Bn@Eh@M`@QXSVGRkCfCaE~D}DlEoCdDSVgDhEiK~MaDbEmF~GkCdEuAfCeBnD}@vByCvIuDvKq@rB_FvNwCrIUx@gDvJoApDuD`LwEdNiBvEoB`EcCdEoGxJeEzFq@|@_CvC}CbEk@t@qAlBm@dAsBbD{A|Ba@p@mEzGwElHwHrLmNnT_U|]iWz`@{BrD{DvHcJtQ[n@MVeApBwA`C_B~BU\\Y`@_AlAyA~AeCzCsCbEq@nAiAdCo@dBi@~A{@rCeB|FmCbJ{BjFkCjFi@dAOTGFcCbFwLhVcE~HgF~JcFtJaCvD{BtCi@p@aBbBkAfA_BvA_ChB}DjC}DtBk@V}@^}CjA}IzCoOnFiPtF_InCuQjGuIxCiQfGwc@nOcDhAuBp@g@Rm@R_Bj@wG|BoC~@wG|BqFjBiC~@_CdAiDhB}@f@q@f@mChByAjAoBdBeChCiAnA}ApB{@lAwC`EuDdFeIdLsC|Da@j@{@jAQFOLiApAiArAcAhAyBvB[ZMFuBtCmApA_BlAB`@DNNJTDd@Bh@DpBJf@@NCVs@|@yBd@}@d@u@jK{N~A{BzGkJdDqEvHqKrAkBxAeB~BaCbAaAlC{BdAy@`CaB~@i@Rt@EDKHJZu@b@",
+          "distance_km": 24.147,
+          "duration_min": 22.633333333333333,
+          "steps": [
+            "Head <b>east</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Continue straight",
+            "Turn <b>left</b>",
+            "Turn <b>left</b> onto <b>Ward Rd</b>",
+            "Turn <b>right</b> onto <b>Hwy 67</b>",
+            "Keep <b>left</b> to stay on <b>Hwy 67</b>, follow signs for <b>US-287 N</b>",
+            "Merge onto <b>US-287 N</b> via the ramp to <b>Fort Worth</b>",
+            "Take the <b>Walnut Creek Dr</b> exit",
+            "Merge onto <b>U.S. 287 Frontage Rd</b>",
+            "Sharp <b>left</b> to stay on <b>U.S. 287 Frontage Rd</b>",
+            "Turn <b>right</b>",
+            "Turn <b>right</b>",
+            "Turn <b>left</b>",
+            "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the left</div>"
+          ]
+        }
+      },
+      {
+        "name": "Methodist Mansfield Medical Center",
+        "address": "2700 East Broad Street, Mansfield",
+        "type": "hospital",
+        "lat": 32.5679981,
+        "lon": -97.0943954,
+        "aqi": 76,
+        "category": "Good air quality",
+        "dominant_pollutant": "pm10",
+        "route": {
+          "polyline": "mnbeEhahoQ?QG[]CErCAh@ChDEVGLMH_@?y@EWIQMc@{@kC{Gq@wBWw@E[UmBsA}CwAuDkCcHIaAB[HY^g@RKJAzJqFlCyAZYZQ@eBFgFHmGB{BsLGwHBqJU_FCwA@m@IaAwCeC{GOc@mJwWc@sA{FgRg@yAq@aCsCoJwBcHu@{B_@}@Q]o@gAaAsAkBoBqAmAeDgCm@_@}@e@IMSMQQW]Sa@Wo@Ko@Aa@@g@Jc@Xi@^_@\\MZE`@@RDXJPLLRVh@Jd@Bn@Eh@M`@QXSVGRkCfCaE~D}DlEoCdDSVgDhEiK~MaDbEmF~GkCdEuAfCeBnD}@vByCvIuDvKq@rB_FvNwCrIUx@gDvJoApDuD`LwEdNiBvEoB`EcCdEoGxJeEzFq@|@_CvC}CbEk@t@qAlBm@dAsBbD{A|Ba@p@mEzGwElHwHrLmNnT_U|]iWz`@{BrD{DvHcJtQ[n@MVeApBwA`C_B~BU\\Y`@_AlAyA~AeCzCsCbEq@nAiAdCo@dBi@~A{@rCeB|FmCbJ{BjFkCjFi@dAOTGFcCbFwLhVcE~HgF~JcFtJaCvD{BtCi@p@aBbBkAfA_BvA_ChB}DjC}DtBk@V}@^}CjA}IzCoOnFiPtF_InC{JhDsAd@_@NOCC?UFi@LwA^sEbAmBb@u@PeBj@aA^QISKUSQ]M_@MsBQkBEUIOIIMGMAQBGBKEQIUKMGs@cCs@uBkAwCoFeNeCqGcAiCoEgL{Ni_@c@iAaAh@{@d@iCxAkAd@m@Ng@FK?SECGSKO?I@QNCHM@wA@kADc@Dq@LuAd@sDtByC|A[PYu@KU[Uc@i@K]KaAIo@LE@OGi@EG",
+          "distance_km": 21.049,
+          "duration_min": 23.016666666666666,
+          "steps": [
+            "Head <b>east</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Continue straight",
+            "Turn <b>left</b>",
+            "Turn <b>left</b> onto <b>Ward Rd</b>",
+            "Turn <b>right</b> onto <b>Hwy 67</b>",
+            "Keep <b>left</b> to stay on <b>Hwy 67</b>, follow signs for <b>US-287 N</b>",
+            "Merge onto <b>US-287 N</b> via the ramp to <b>Fort Worth</b>",
+            "Take the <b>Heritage Pkwy</b> ramp",
+            "Keep <b>right</b>, follow signs for <b>Heritage Parkway</b>",
+            "Turn <b>right</b> onto <b>Heritage Pkwy</b>",
+            "Turn <b>left</b> onto <b>Matlock Rd</b>",
+            "At the traffic circle, take the <b>1st</b> exit and stay on <b>Matlock Rd</b>",
+            "Turn <b>right</b>",
+            "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      },
+      {
+        "name": "Methodist Charlton Medical Center",
+        "address": "3500 West Wheatland Road, Dallas",
+        "type": "hospital",
+        "lat": 32.6457322,
+        "lon": -96.87629609999999,
+        "aqi": 76,
+        "category": "Good air quality",
+        "dominant_pollutant": "pm10",
+        "route": {
+          "polyline": "mnbeEhahoQ?QG[]CErCAh@ChDEVGLMH_@?y@EWIQMc@{@kC{Gq@wBWw@E[UmBsA}CwAuDkCcHIaAB[HY^g@RKJAzJqFlCyAZYZQ@eBFgFHmGB{BsLGwHBqJU_FCwA@m@IaAwCeC{GOc@wAyDy@_COKOUcAkBiAcCm@}ASQeAmD[cAsDyLqByGiDcLaBeFgAgC_BwCaAuA}@iAoAsAu@q@}BeB_B_A_Bu@sAg@_Co@}Bg@cAQ}@II?aBAcE?gE?yGAcF?mACuAIwAO_AOsAYsA_@{@YeBs@kAo@}AaAyAiAcA_AaAeAs@}@u@gAeAcBqAoC}AkEiIuVcQuh@u@kBm@uAs@uAaAcBiAcBy@gAw@_A{B{BgAcA}BcBeCyAwCwAk@WiBi@iCu@uCy@{GqBcDmAcDsAcDoAqCaAgHwByLkDmUuGyK{CwJcCiJyB}Cw@iGcByK_DmN}DmOkEsCy@sCo@aC_@sAOmAKgDQyACwA@{CF_GNyJVaGHaEDmJD_OH_LFcCAyAEmBKgCUoDi@qAYgBe@mC}@oAe@qCoAiJgEkIwDwOgHwHkD_CgAmAi@aDcAwCy@aCi@yEcAaBa@qBo@{CiAsCoAaLeFcF_CuBiA}AaAo@a@}@o@{AmAo@e@kCeCeBgBcBsB{AqBqCyDeFgH}AwBkCeDcFqFsMkNyCcDoEuEkEyDyHoGuCcCsDgDuDuD{BcCmBsBmQmRgXsYwHkImEsE}F_GkCcCmDaDcD_DeDeDuEcFwT}UmE{EmCwC}CaDoCyCqFoG}FqHiH}JaKmNkFcGoH_IqVyWmJeKqNmO_c@{d@ec@ie@{R_TmF{FmCwCqAuAy@{@A[OQg@q@yAaC]o@Kc@_@]u@y@[[{A_B@sB?iD@kKBiH@_Cj@@vACzDD|D?@aG@QDMn@mA@aC?[iB@w@?ID?N?@",
+          "distance_km": 29.26,
+          "duration_min": 25.483333333333334,
+          "steps": [
+            "Head <b>east</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Continue straight",
+            "Turn <b>left</b>",
+            "Turn <b>left</b> onto <b>Ward Rd</b>",
+            "Turn <b>right</b> onto <b>Hwy 67</b>",
+            "Take the ramp on the <b>left</b> onto <b>US-67 N</b>",
+            "Continue straight to stay on <b>US-67 N</b>",
+            "Take the <b>Wheatland Rd</b> exit toward <b>Camp Wisdom Rd</b>",
+            "Merge onto <b>Hwy 67</b>",
+            "Turn <b>right</b> onto <b>W Wheatland Rd</b>",
+            "Turn <b>right</b> onto <b>Bolton Boone Dr</b>",
+            "Turn <b>left</b>",
+            "Turn <b>left</b>",
+            "Continue straight<div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      },
+      {
+        "name": "Medical City Arlington",
+        "address": "3301 Matlock Road, Arlington",
+        "type": "hospital",
+        "lat": 32.6923814,
+        "lon": -97.11298339999999,
+        "aqi": 75,
+        "category": "Good air quality",
+        "dominant_pollutant": "pm25",
+        "route": {
+          "polyline": "mnbeEhahoQ?QG[]CErCAh@ChDEVGLMH_@?y@EWIQMc@{@kC{Gq@wBWw@E[UmBsA}CwAuDkCcHIaAB[HY^g@RKJAzJqFlCyAZYZQ@eBFgFHmGB{BsLGwHBqJU_FCwA@m@IaAwCeC{GOc@mJwWc@sA{FgRg@yAq@aCsCoJwBcHu@{B_@}@Q]o@gAaAsAkBoBqAmAeDgCm@_@}@e@IMSMQQW]Sa@Wo@Ko@Aa@@g@Jc@Xi@^_@\\MZE`@@RDXJPLLRVh@Jd@Bn@Eh@M`@QXSVGRkCfCaE~D}DlEoCdDSVgDhEiK~MaDbEmF~GkCdEuAfCeBnD}@vByCvIuDvKq@rB_FvNwCrIUx@gDvJoApDuD`LwEdNiBvEoB`EcCdEoGxJeEzFq@|@_CvC}CbEk@t@qAlBm@dAsBbD{A|Ba@p@mEzGwElHwHrLmNnT_U|]iWz`@{BrD{DvHcJtQ[n@MVeApBwA`C_B~BU\\Y`@_AlAyA~AOFy@p@cB|AQR{DjESXq@|@g@z@[j@[l@_@`Ae@dBm@xBe@?gBKqEQaOi@uJ_@yNk@OHoFLcEJcA?wDIqDMmDMwCEqB@aCFaCL{AJcCXoDj@qB`@kCr@sRlFaG`ByNdEcEhAeCj@cCb@oC`@iBR_BJiCF_A@oE?qDKwD[wC_@_HqAoH{Ak[eGaQgDoOyCiHwAcRoD_JgBwFeA}LaCiHqAwCa@eEe@gD[{F[}IUqFM}Qc@mlAiC}Rc@{IUqTm@qDMgBMkD_@{AUw@QoAYyD{@eAYo@SiCeA{@_@_Bs@uCaBqAy@eDaCgFyD{OmL_JwGiE}CsC{BsByAqCgBsC{AwCoAoDwAaEgAeCk@wB_@iEi@wBS}MmAwPcB{c@mEmCY}Ea@}CMoF?eB@yCLuCHgFN}DRqAFmBJoDNmDLkHXaPn@}CJwCB{G?sICcDE}L@k@?SKqCMqCMqCOoBSoDg@c@C}@CeBJ{AZy@Xw@`@kAx@}@bAu@dAe@dAWp@c@hBSlBE|@AlABx@LnBN~BLlBV~DNnBHrBJrD@hATfAE`KKlWAnA?jACbFGjSEdIMvb@M`a@Spm@ApDAvDA^URCVQtCI~AMlCKfBIPCrBCr@QdGe@jIi@nJM`CObCUZg@`@QHi@?qBAaF?eFAqF@qC?u@CgG?cK?aL?yC?CgBCmAA_AU?w@?_BAi@Ba@Da@FC??W?K@G@GCGEE",
+          "distance_km": 37.967,
+          "duration_min": 32.93333333333333,
+          "steps": [
+            "Head <b>east</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Turn <b>left</b><div style=\"font-size:0.9em\">Restricted usage road</div>",
+            "Continue straight",
+            "Turn <b>left</b>",
+            "Turn <b>left</b> onto <b>Ward Rd</b>",
+            "Turn <b>right</b> onto <b>Hwy 67</b>",
+            "Keep <b>left</b> to stay on <b>Hwy 67</b>, follow signs for <b>US-287 N</b>",
+            "Merge onto <b>US-287 N</b> via the ramp to <b>Fort Worth</b>",
+            "Take the <b>Texas 360 N</b> ramp to <b>Arlington</b>/<wbr/><b>Grand Pr</b>",
+            "Turn <b>right</b> onto <b>TX-360 N</b>",
+            "Take the <b>TX-360Toll</b> ramp on the <b>left</b><div style=\"font-size:0.9em\">Toll road</div>",
+            "Continue onto <b>Texas 360 Toll</b><div style=\"font-size:0.9em\">Toll road</div>",
+            "Continue onto <b>TX-360 N</b>",
+            "Take the exit onto <b>I-20 W</b> toward <b>Ft Worth</b>",
+            "Take exit <b>450</b> toward <b>Matlock Rd</b>",
+            "Merge onto <b>I-20 Frontage Rd</b>/<wbr/><b>W Interstate 20</b>",
+            "Turn <b>right</b> onto <b>Matlock Rd</b>",
+            "Turn <b>right</b> onto <b>W Mayfield Rd</b>",
+            "Turn <b>left</b> onto <b>Hospital Dr</b>",
+            "Turn <b>right</b><div style=\"font-size:0.9em\">Destination will be on the right</div>"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "name": "Kenedy County",
+    "address": "Fire affected area",
+    "type": "county",
+    "lat": 26.890998000000003,
+    "lon": -97.708292,
+    "aqi": 73,
+    "category": "Good air quality",
+    "dominant_pollutant": "pm10",
+    "pollutants": [],
+    "evacuation_locations": []
+  }
+]

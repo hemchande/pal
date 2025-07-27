@@ -1,0 +1,27 @@
+Emergency Situation Report:
+
+As of July 26, 2025, Texas is experiencing a significant number of fires, with the highest fire counts recorded in Montgomery County, Lea County, and Freestone County, each reporting five fires. Howard County and Eddy County are also of concern, each with four fires. 
+
+Top Threat Zones:
+
+The top threat zones are Montgomery County, Lea County, and Freestone County. The fire rate per 100k people is highest in Freestone County at 24.2189, followed by Montgomery County at 0.667011. The fire rate for Lea County is currently unknown. 
+
+Spread Risks and Prevailing Wind Directions:
+
+The fire cluster spread data indicates an average speed of 0.034892 km/h, with a total distance of 0.335544 km, and a total of five fires within the cluster. This suggests that the fires are spreading relatively slowly, which may be due to prevailing wind directions or other environmental factors. 
+
+Weather Risks:
+
+The average temperature, humidity, and wind speed data for the affected counties are currently unavailable. However, high heat and low humidity typically exacerbate fire conditions, leading to increased fire risk and spread. 
+
+Air Quality Concern:
+
+The air quality index (AQI) shows moderate air quality in Lea County and Freestone County, with dominant pollutants being ozone (o3) and particulate matter (pm25) respectively. Montgomery County has good air quality with an AQI of 65, with ozone being the dominant pollutant. 
+
+Safe Evacuation Points:
+
+For Montgomery County, six safe evacuation points have been identified, including three lodging facilities and three hospitals. All have good air quality, with AQIs ranging from 60 to 61. For Freestone County, two safe evacuation points have been identified, one lodging facility and one hospital, both with moderate air quality (AQIs of 57 and 56 respectively). No evacuation points have been identified for Lea County at this time.
+
+Resource Allocation Recommendations:
+
+Priority should be given to the counties with the highest fire counts and rates, namely Montgomery County, Lea County, and Freestone County. Resources should also be allocated to monitor and maintain the air quality in these areas, especially in areas with moderate air quality. Additionally, efforts should be made to provide accurate and timely weather data for these counties to better predict fire behavior and spread.

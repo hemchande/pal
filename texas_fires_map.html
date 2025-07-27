@@ -1,0 +1,2345 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fc04aada060905cab49ab8def3eb60f5 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+ <div style="position: fixed; 
+     bottom: 50px; left: 50px; width: 180px; height: 120px; 
+     border:2px solid grey; z-index:9999; font-size:14px;
+     background-color:white; opacity: 0.85; padding: 10px;">
+ <b>Fire Confidence Legend</b><br>
+ <i class="fa fa-circle" style="color:red"></i> High<br>
+ <i class="fa fa-circle" style="color:orange"></i> Nominal<br>
+ <i class="fa fa-circle" style="color:green"></i> Low<br>
+ <i class="fa fa-circle" style="color:blue"></i> Unknown<br>
+ </div>
+ 
+    
+            <div class="folium-map" id="map_fc04aada060905cab49ab8def3eb60f5" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fc04aada060905cab49ab8def3eb60f5 = L.map(
+                "map_fc04aada060905cab49ab8def3eb60f5",
+                {
+                    center: [31.0, -99.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_78fe36980c3fbf3dcb40c413ac0c643e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_78fe36980c3fbf3dcb40c413ac0c643e.addTo(map_fc04aada060905cab49ab8def3eb60f5);
+        
+    
+            var feature_group_e91d8862526ae10fdc0d135d14e5fcf6 = L.featureGroup(
+                {}
+            );
+        
+    
+            var circle_marker_7173087c1843bafd677ffd96740300bd = L.circleMarker(
+                [33.04668, -93.50953],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_8bc968ab32419a08d8904f0966a05a9e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eba659bfbe37fc6fc326c5811ade6f2e = $(`<div id="html_eba659bfbe37fc6fc326c5811ade6f2e" style="width: 100.0%; height: 100.0%;">County: Lafayette County<br>Population: nan<br>FRP: 1.96<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_8bc968ab32419a08d8904f0966a05a9e.setContent(html_eba659bfbe37fc6fc326c5811ade6f2e);
+            
+        
+
+        circle_marker_7173087c1843bafd677ffd96740300bd.bindPopup(popup_8bc968ab32419a08d8904f0966a05a9e)
+        ;
+
+        
+    
+    
+            var circle_marker_4b079ef293f7791436683104c103e611 = L.circleMarker(
+                [33.25376, -94.07058],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_01c4e4e667a769e2595c454b606dfa75 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_af5183e5a6d8be6ce186ad234a75a66f = $(`<div id="html_af5183e5a6d8be6ce186ad234a75a66f" style="width: 100.0%; height: 100.0%;">County: Cass County<br>Population: 28622.0<br>FRP: 1.27<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_01c4e4e667a769e2595c454b606dfa75.setContent(html_af5183e5a6d8be6ce186ad234a75a66f);
+            
+        
+
+        circle_marker_4b079ef293f7791436683104c103e611.bindPopup(popup_01c4e4e667a769e2595c454b606dfa75)
+        ;
+
+        
+    
+    
+            var circle_marker_f702b40bf6c8a5dd3dc1cc40f3adb5cf = L.circleMarker(
+                [33.6077, -93.792],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_514ad60d268114983b5a43bf0ccd5d1a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3fd042d4a2bf88b3d0808119e106c461 = $(`<div id="html_3fd042d4a2bf88b3d0808119e106c461" style="width: 100.0%; height: 100.0%;">County: Hempstead County<br>Population: nan<br>FRP: 1.02<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_514ad60d268114983b5a43bf0ccd5d1a.setContent(html_3fd042d4a2bf88b3d0808119e106c461);
+            
+        
+
+        circle_marker_f702b40bf6c8a5dd3dc1cc40f3adb5cf.bindPopup(popup_514ad60d268114983b5a43bf0ccd5d1a)
+        ;
+
+        
+    
+    
+            var circle_marker_a8f0fb5bcdc31835d7dc488b2b7e3de4 = L.circleMarker(
+                [33.97394, -94.62115],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_66cd56c49a5762b5fb9100848b6f4983 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6ea40109c99278aaecb72b980a8594cf = $(`<div id="html_6ea40109c99278aaecb72b980a8594cf" style="width: 100.0%; height: 100.0%;">County: McCurtain County<br>Population: nan<br>FRP: 1.41<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_66cd56c49a5762b5fb9100848b6f4983.setContent(html_6ea40109c99278aaecb72b980a8594cf);
+            
+        
+
+        circle_marker_a8f0fb5bcdc31835d7dc488b2b7e3de4.bindPopup(popup_66cd56c49a5762b5fb9100848b6f4983)
+        ;
+
+        
+    
+    
+            var circle_marker_da582605dbb20deb8f2fb93fecee285b = L.circleMarker(
+                [33.99615, -94.58606],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a48c659ffe3acd6e88e52b8216aff8ac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3f20538306cfc2ece55633ae9226d5e2 = $(`<div id="html_3f20538306cfc2ece55633ae9226d5e2" style="width: 100.0%; height: 100.0%;">County: McCurtain County<br>Population: nan<br>FRP: 0.51<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_a48c659ffe3acd6e88e52b8216aff8ac.setContent(html_3f20538306cfc2ece55633ae9226d5e2);
+            
+        
+
+        circle_marker_da582605dbb20deb8f2fb93fecee285b.bindPopup(popup_a48c659ffe3acd6e88e52b8216aff8ac)
+        ;
+
+        
+    
+    
+            var circle_marker_d9b37a3790675ac3c07aa8ad9025c61d = L.circleMarker(
+                [34.30645, -97.49235],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_13cc063d29439cb43d3295d9f25f2f05 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_37234e949c1520bb0eefdccccfc72a8c = $(`<div id="html_37234e949c1520bb0eefdccccfc72a8c" style="width: 100.0%; height: 100.0%;">County: Carter County<br>Population: nan<br>FRP: 0.74<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_13cc063d29439cb43d3295d9f25f2f05.setContent(html_37234e949c1520bb0eefdccccfc72a8c);
+            
+        
+
+        circle_marker_d9b37a3790675ac3c07aa8ad9025c61d.bindPopup(popup_13cc063d29439cb43d3295d9f25f2f05)
+        ;
+
+        
+    
+    
+            var circle_marker_94d8a5327e36896e318e97e5505624b6 = L.circleMarker(
+                [34.60844, -94.40182],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_d0b54e1a18ec47ed9d5f388a96975e9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e709c2b28c3c8ac39d367ad210dccdac = $(`<div id="html_e709c2b28c3c8ac39d367ad210dccdac" style="width: 100.0%; height: 100.0%;">County: Polk County<br>Population: nan<br>FRP: 0.36<br>Confidence: n<br>Date: 2025-07-18<br>Time: 803</div>`)[0];
+                popup_d0b54e1a18ec47ed9d5f388a96975e9f.setContent(html_e709c2b28c3c8ac39d367ad210dccdac);
+            
+        
+
+        circle_marker_94d8a5327e36896e318e97e5505624b6.bindPopup(popup_d0b54e1a18ec47ed9d5f388a96975e9f)
+        ;
+
+        
+    
+    
+            var circle_marker_1e38fcb26d7701343e62db3e1bf559f6 = L.circleMarker(
+                [27.82175, -97.20939],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_35bca338a04e86f5d7514c5522aa61c9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d41aadc6035582fad0d88bd9f20d4ea = $(`<div id="html_9d41aadc6035582fad0d88bd9f20d4ea" style="width: 100.0%; height: 100.0%;">County: Nueces County<br>Population: 353125.0<br>FRP: 3.55<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_35bca338a04e86f5d7514c5522aa61c9.setContent(html_9d41aadc6035582fad0d88bd9f20d4ea);
+            
+        
+
+        circle_marker_1e38fcb26d7701343e62db3e1bf559f6.bindPopup(popup_35bca338a04e86f5d7514c5522aa61c9)
+        ;
+
+        
+    
+    
+            var circle_marker_4765a07cb9a9fe0b1bf3b313961071dc = L.circleMarker(
+                [27.89, -97.27435],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_275ea4c790800c6984345ff70ef944b8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bc7692a0584c0fb45bef51916c24dac2 = $(`<div id="html_bc7692a0584c0fb45bef51916c24dac2" style="width: 100.0%; height: 100.0%;">County: San Patricio County<br>Population: 71467.0<br>FRP: 1.75<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_275ea4c790800c6984345ff70ef944b8.setContent(html_bc7692a0584c0fb45bef51916c24dac2);
+            
+        
+
+        circle_marker_4765a07cb9a9fe0b1bf3b313961071dc.bindPopup(popup_275ea4c790800c6984345ff70ef944b8)
+        ;
+
+        
+    
+    
+            var circle_marker_308c4241e765960f0d76bf7deefdc4ed = L.circleMarker(
+                [28.06002, -97.4379],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a487dcfcf573c74073758e104e207030 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e8d0eb129209786cc76f4266c21719cb = $(`<div id="html_e8d0eb129209786cc76f4266c21719cb" style="width: 100.0%; height: 100.0%;">County: San Patricio County<br>Population: 71467.0<br>FRP: 3.07<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_a487dcfcf573c74073758e104e207030.setContent(html_e8d0eb129209786cc76f4266c21719cb);
+            
+        
+
+        circle_marker_308c4241e765960f0d76bf7deefdc4ed.bindPopup(popup_a487dcfcf573c74073758e104e207030)
+        ;
+
+        
+    
+    
+            var circle_marker_e425db04ee6ce1d4f1c558ea6d9c0f13 = L.circleMarker(
+                [28.32215, -99.26835],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a4caf2989f1f7dfc91f9171d2b666748 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_99eeeb345927991293538c722edee70a = $(`<div id="html_99eeeb345927991293538c722edee70a" style="width: 100.0%; height: 100.0%;">County: La Salle County<br>Population: 6679.0<br>FRP: 0.92<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_a4caf2989f1f7dfc91f9171d2b666748.setContent(html_99eeeb345927991293538c722edee70a);
+            
+        
+
+        circle_marker_e425db04ee6ce1d4f1c558ea6d9c0f13.bindPopup(popup_a4caf2989f1f7dfc91f9171d2b666748)
+        ;
+
+        
+    
+    
+            var circle_marker_ad4326859b0e91ec7f454532c0b4b7fb = L.circleMarker(
+                [28.35526, -98.56243],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_fefdc8e630f6a635af7ef65d0f7eac20 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4f05661774ce4d68d4596506754aa925 = $(`<div id="html_4f05661774ce4d68d4596506754aa925" style="width: 100.0%; height: 100.0%;">County: McMullen County<br>Population: 565.0<br>FRP: 0.67<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_fefdc8e630f6a635af7ef65d0f7eac20.setContent(html_4f05661774ce4d68d4596506754aa925);
+            
+        
+
+        circle_marker_ad4326859b0e91ec7f454532c0b4b7fb.bindPopup(popup_fefdc8e630f6a635af7ef65d0f7eac20)
+        ;
+
+        
+    
+    
+            var circle_marker_8750d18aa15b73ff0fc7bbcc9e6c64d5 = L.circleMarker(
+                [28.78731, -99.42777],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_cdd0bc65f77f4f09bd708c88a7126abf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4ff3cb062da9f583d9f41622bc3a2f73 = $(`<div id="html_4ff3cb062da9f583d9f41622bc3a2f73" style="width: 100.0%; height: 100.0%;">County: Zavala County<br>Population: 9209.0<br>FRP: 0.77<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_cdd0bc65f77f4f09bd708c88a7126abf.setContent(html_4ff3cb062da9f583d9f41622bc3a2f73);
+            
+        
+
+        circle_marker_8750d18aa15b73ff0fc7bbcc9e6c64d5.bindPopup(popup_cdd0bc65f77f4f09bd708c88a7126abf)
+        ;
+
+        
+    
+    
+            var circle_marker_15b11a449b900002cf6416c165455d98 = L.circleMarker(
+                [29.57567, -98.03356],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_2ee56d612a8224cf312e8aa119ba0291 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b8baa5d112bc438b4dcca7bd43515754 = $(`<div id="html_b8baa5d112bc438b4dcca7bd43515754" style="width: 100.0%; height: 100.0%;">County: Guadalupe County<br>Population: 195166.0<br>FRP: 3.68<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_2ee56d612a8224cf312e8aa119ba0291.setContent(html_b8baa5d112bc438b4dcca7bd43515754);
+            
+        
+
+        circle_marker_15b11a449b900002cf6416c165455d98.bindPopup(popup_2ee56d612a8224cf312e8aa119ba0291)
+        ;
+
+        
+    
+    
+            var circle_marker_ac785121fb14d9d0c16d3959f3307eb2 = L.circleMarker(
+                [29.57647, -98.03088],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0e3413f5f1c3d1bb048a7e4fd504cc26 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bd4c7d0408fa24b2b82f69e9e6357b70 = $(`<div id="html_bd4c7d0408fa24b2b82f69e9e6357b70" style="width: 100.0%; height: 100.0%;">County: Guadalupe County<br>Population: 195166.0<br>FRP: 2.27<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_0e3413f5f1c3d1bb048a7e4fd504cc26.setContent(html_bd4c7d0408fa24b2b82f69e9e6357b70);
+            
+        
+
+        circle_marker_ac785121fb14d9d0c16d3959f3307eb2.bindPopup(popup_0e3413f5f1c3d1bb048a7e4fd504cc26)
+        ;
+
+        
+    
+    
+            var circle_marker_eb53a5554ed8748872effd298691a6af = L.circleMarker(
+                [29.57709, -98.03548],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_5476b939c045f2d6b4527caa640fe6c7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_667861dc294a40360e1d9fbfa8a58656 = $(`<div id="html_667861dc294a40360e1d9fbfa8a58656" style="width: 100.0%; height: 100.0%;">County: Guadalupe County<br>Population: 195166.0<br>FRP: 2.27<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_5476b939c045f2d6b4527caa640fe6c7.setContent(html_667861dc294a40360e1d9fbfa8a58656);
+            
+        
+
+        circle_marker_eb53a5554ed8748872effd298691a6af.bindPopup(popup_5476b939c045f2d6b4527caa640fe6c7)
+        ;
+
+        
+    
+    
+            var circle_marker_ca069283c9dc80b80b5479d6b3623021 = L.circleMarker(
+                [30.26717, -99.21115],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a5ed9d960b128094c51fac7fd087f695 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f0356467936077d514b69d817f7d792b = $(`<div id="html_f0356467936077d514b69d817f7d792b" style="width: 100.0%; height: 100.0%;">County: Gillespie County<br>Population: 28159.0<br>FRP: 0.89<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_a5ed9d960b128094c51fac7fd087f695.setContent(html_f0356467936077d514b69d817f7d792b);
+            
+        
+
+        circle_marker_ca069283c9dc80b80b5479d6b3623021.bindPopup(popup_a5ed9d960b128094c51fac7fd087f695)
+        ;
+
+        
+    
+    
+            var circle_marker_284e79f275418c798416287f2c1bf6ff = L.circleMarker(
+                [30.26837, -99.2121],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_67a6cd621171c93538feb69fbbd0dad1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c72716cb6640d44498464fe053d32591 = $(`<div id="html_c72716cb6640d44498464fe053d32591" style="width: 100.0%; height: 100.0%;">County: Gillespie County<br>Population: 28159.0<br>FRP: 0.83<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_67a6cd621171c93538feb69fbbd0dad1.setContent(html_c72716cb6640d44498464fe053d32591);
+            
+        
+
+        circle_marker_284e79f275418c798416287f2c1bf6ff.bindPopup(popup_67a6cd621171c93538feb69fbbd0dad1)
+        ;
+
+        
+    
+    
+            var circle_marker_1afcd178abf0faad0e306ee36210ddc8 = L.circleMarker(
+                [30.5371, -100.16579],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a4bf27f11290e198b7276074d285aa80 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5441931c442cf5b37fbdb82e92d647ae = $(`<div id="html_5441931c442cf5b37fbdb82e92d647ae" style="width: 100.0%; height: 100.0%;">County: Sutton County<br>Population: 3269.0<br>FRP: 0.62<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_a4bf27f11290e198b7276074d285aa80.setContent(html_5441931c442cf5b37fbdb82e92d647ae);
+            
+        
+
+        circle_marker_1afcd178abf0faad0e306ee36210ddc8.bindPopup(popup_a4bf27f11290e198b7276074d285aa80)
+        ;
+
+        
+    
+    
+            var circle_marker_fe88f365cb48047bee704d6740ba1226 = L.circleMarker(
+                [30.54405, -100.26343],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_cab0a173a4088ffc75991331969ed009 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_62c90cf2219824b803c8f845db7c2ad5 = $(`<div id="html_62c90cf2219824b803c8f845db7c2ad5" style="width: 100.0%; height: 100.0%;">County: Sutton County<br>Population: 3269.0<br>FRP: 0.98<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_cab0a173a4088ffc75991331969ed009.setContent(html_62c90cf2219824b803c8f845db7c2ad5);
+            
+        
+
+        circle_marker_fe88f365cb48047bee704d6740ba1226.bindPopup(popup_cab0a173a4088ffc75991331969ed009)
+        ;
+
+        
+    
+    
+            var circle_marker_41ffc570a19434f1e425c27309f71e07 = L.circleMarker(
+                [30.5445, -100.26744],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_27d5e44f5a099674eaf82eb1fadae570 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bd4b31b2b1d78b81c5a295b4fafee547 = $(`<div id="html_bd4b31b2b1d78b81c5a295b4fafee547" style="width: 100.0%; height: 100.0%;">County: Sutton County<br>Population: 3269.0<br>FRP: 0.98<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_27d5e44f5a099674eaf82eb1fadae570.setContent(html_bd4b31b2b1d78b81c5a295b4fafee547);
+            
+        
+
+        circle_marker_41ffc570a19434f1e425c27309f71e07.bindPopup(popup_27d5e44f5a099674eaf82eb1fadae570)
+        ;
+
+        
+    
+    
+            var circle_marker_3c3daa09106b881d95c0a77da22afefd = L.circleMarker(
+                [31.04004, -102.22463],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_f1aefc2c28f3c2b710ec04e8cd7a96d5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8383c2d21eed985178e6e700c3e288e8 = $(`<div id="html_8383c2d21eed985178e6e700c3e288e8" style="width: 100.0%; height: 100.0%;">County: Crockett County<br>Population: 2799.0<br>FRP: 1.24<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_f1aefc2c28f3c2b710ec04e8cd7a96d5.setContent(html_8383c2d21eed985178e6e700c3e288e8);
+            
+        
+
+        circle_marker_3c3daa09106b881d95c0a77da22afefd.bindPopup(popup_f1aefc2c28f3c2b710ec04e8cd7a96d5)
+        ;
+
+        
+    
+    
+            var circle_marker_ec096e86e2eaffbe8ed8fdb82268b5dc = L.circleMarker(
+                [31.25642, -101.25716],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_efd832d6da1c6021aa77362ffbcef206 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_994eceb089b8276e1a1ef2bc71ed83be = $(`<div id="html_994eceb089b8276e1a1ef2bc71ed83be" style="width: 100.0%; height: 100.0%;">County: Irion County<br>Population: 1526.0<br>FRP: 1.26<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_efd832d6da1c6021aa77362ffbcef206.setContent(html_994eceb089b8276e1a1ef2bc71ed83be);
+            
+        
+
+        circle_marker_ec096e86e2eaffbe8ed8fdb82268b5dc.bindPopup(popup_efd832d6da1c6021aa77362ffbcef206)
+        ;
+
+        
+    
+    
+            var circle_marker_8f0e3c6b577adabc982470aa33a1526a = L.circleMarker(
+                [31.31164, -101.72695],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0bdbe36c5ca3aa3368d9726250f7b031 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_51325ad550870db0e0ff79233f94057e = $(`<div id="html_51325ad550870db0e0ff79233f94057e" style="width: 100.0%; height: 100.0%;">County: Reagan County<br>Population: 3139.0<br>FRP: 0.74<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_0bdbe36c5ca3aa3368d9726250f7b031.setContent(html_51325ad550870db0e0ff79233f94057e);
+            
+        
+
+        circle_marker_8f0e3c6b577adabc982470aa33a1526a.bindPopup(popup_0bdbe36c5ca3aa3368d9726250f7b031)
+        ;
+
+        
+    
+    
+            var circle_marker_f7a2866362c69094bb29542748f071ff = L.circleMarker(
+                [31.36211, -101.78192],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0bea25ff7c62619413d5b418dc143bab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_de002e91a8757c556749e7a313427028 = $(`<div id="html_de002e91a8757c556749e7a313427028" style="width: 100.0%; height: 100.0%;">County: Upton County<br>Population: 3128.0<br>FRP: 1.11<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_0bea25ff7c62619413d5b418dc143bab.setContent(html_de002e91a8757c556749e7a313427028);
+            
+        
+
+        circle_marker_f7a2866362c69094bb29542748f071ff.bindPopup(popup_0bea25ff7c62619413d5b418dc143bab)
+        ;
+
+        
+    
+    
+            var circle_marker_73a317c0c26270db5fb9a3a792f78159 = L.circleMarker(
+                [31.4984, -103.5332],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_08e6490c75acbce59f30c9162ae71e8f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92c9116c0d1d2a81895b65e0b4232cbf = $(`<div id="html_92c9116c0d1d2a81895b65e0b4232cbf" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 1.47<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_08e6490c75acbce59f30c9162ae71e8f.setContent(html_92c9116c0d1d2a81895b65e0b4232cbf);
+            
+        
+
+        circle_marker_73a317c0c26270db5fb9a3a792f78159.bindPopup(popup_08e6490c75acbce59f30c9162ae71e8f)
+        ;
+
+        
+    
+    
+            var circle_marker_8e5a23fce64a30ce1405ee06bf31e438 = L.circleMarker(
+                [31.70762, -97.59212],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_d035c4ee59858aecea9eb2cb3a268f99 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_a0093e6b0afeffb2c8baa5bc96c7d7af = $(`<div id="html_a0093e6b0afeffb2c8baa5bc96c7d7af" style="width: 100.0%; height: 100.0%;">County: Bosque County<br>Population: 19013.0<br>FRP: 1.09<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_d035c4ee59858aecea9eb2cb3a268f99.setContent(html_a0093e6b0afeffb2c8baa5bc96c7d7af);
+            
+        
+
+        circle_marker_8e5a23fce64a30ce1405ee06bf31e438.bindPopup(popup_d035c4ee59858aecea9eb2cb3a268f99)
+        ;
+
+        
+    
+    
+            var circle_marker_bf968d6dc5d905516c43efd06bd94f88 = L.circleMarker(
+                [31.79603, -103.92977],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a046ecc8ed9fe9f7842cdd4a8d16c6d1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8922048a1f1ed668148930c5d197bf79 = $(`<div id="html_8922048a1f1ed668148930c5d197bf79" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 0.6<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_a046ecc8ed9fe9f7842cdd4a8d16c6d1.setContent(html_8922048a1f1ed668148930c5d197bf79);
+            
+        
+
+        circle_marker_bf968d6dc5d905516c43efd06bd94f88.bindPopup(popup_a046ecc8ed9fe9f7842cdd4a8d16c6d1)
+        ;
+
+        
+    
+    
+            var circle_marker_a2766bdcb6c3e0ee64cdd038e56f4c98 = L.circleMarker(
+                [31.80948, -103.90384],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_cc7ba1ea1f3664e9ed4efc44794e5dc4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fedf35ac4714801db72d604881c6e63a = $(`<div id="html_fedf35ac4714801db72d604881c6e63a" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 0.93<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_cc7ba1ea1f3664e9ed4efc44794e5dc4.setContent(html_fedf35ac4714801db72d604881c6e63a);
+            
+        
+
+        circle_marker_a2766bdcb6c3e0ee64cdd038e56f4c98.bindPopup(popup_cc7ba1ea1f3664e9ed4efc44794e5dc4)
+        ;
+
+        
+    
+    
+            var circle_marker_64523336266f6947337aaf1c49f9ee51 = L.circleMarker(
+                [31.8473, -101.77133],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c7ee916c828388ac438249397aa29817 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_609ec291ac6bde61ba0802a299b628b0 = $(`<div id="html_609ec291ac6bde61ba0802a299b628b0" style="width: 100.0%; height: 100.0%;">County: Glasscock County<br>Population: 1153.0<br>FRP: 0.73<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_c7ee916c828388ac438249397aa29817.setContent(html_609ec291ac6bde61ba0802a299b628b0);
+            
+        
+
+        circle_marker_64523336266f6947337aaf1c49f9ee51.bindPopup(popup_c7ee916c828388ac438249397aa29817)
+        ;
+
+        
+    
+    
+            var circle_marker_5197ade34db8d1fd3193cc3fd5434ecc = L.circleMarker(
+                [31.84904, -103.94869],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_78bb7349ce0cc8d20678322ed55f2661 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82705b2ce42d9f8ca22ef05011ab2683 = $(`<div id="html_82705b2ce42d9f8ca22ef05011ab2683" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 0.52<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_78bb7349ce0cc8d20678322ed55f2661.setContent(html_82705b2ce42d9f8ca22ef05011ab2683);
+            
+        
+
+        circle_marker_5197ade34db8d1fd3193cc3fd5434ecc.bindPopup(popup_78bb7349ce0cc8d20678322ed55f2661)
+        ;
+
+        
+    
+    
+            var circle_marker_c4474003be19d9eeee34f9a79aeb50ca = L.circleMarker(
+                [31.84909, -96.39501],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_1422f2c876b93759fe392957bcc3c14c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fd138cb7f90ae1be90c519fafdb457d9 = $(`<div id="html_fd138cb7f90ae1be90c519fafdb457d9" style="width: 100.0%; height: 100.0%;">County: Navarro County<br>Population: 56533.0<br>FRP: 0.51<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_1422f2c876b93759fe392957bcc3c14c.setContent(html_fd138cb7f90ae1be90c519fafdb457d9);
+            
+        
+
+        circle_marker_c4474003be19d9eeee34f9a79aeb50ca.bindPopup(popup_1422f2c876b93759fe392957bcc3c14c)
+        ;
+
+        
+    
+    
+            var circle_marker_e4cc1d5166b597eb52ddc047319919f7 = L.circleMarker(
+                [31.86025, -101.76437],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_d32373ef41a390ee350c3796e0f4bf52 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_88de0653d9f15dd3a7aaa3aae7cbc538 = $(`<div id="html_88de0653d9f15dd3a7aaa3aae7cbc538" style="width: 100.0%; height: 100.0%;">County: Glasscock County<br>Population: 1153.0<br>FRP: 1.66<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_d32373ef41a390ee350c3796e0f4bf52.setContent(html_88de0653d9f15dd3a7aaa3aae7cbc538);
+            
+        
+
+        circle_marker_e4cc1d5166b597eb52ddc047319919f7.bindPopup(popup_d32373ef41a390ee350c3796e0f4bf52)
+        ;
+
+        
+    
+    
+            var circle_marker_1968d74d146eba639dd660b7298eca09 = L.circleMarker(
+                [31.92418, -104.02224],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_6fda70cf84efc1c0328507c56602945a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_b37d96835eea54774a52210bb0cb138f = $(`<div id="html_b37d96835eea54774a52210bb0cb138f" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 0.53<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_6fda70cf84efc1c0328507c56602945a.setContent(html_b37d96835eea54774a52210bb0cb138f);
+            
+        
+
+        circle_marker_1968d74d146eba639dd660b7298eca09.bindPopup(popup_6fda70cf84efc1c0328507c56602945a)
+        ;
+
+        
+    
+    
+            var circle_marker_7c2099ae55407951fcf857e6b837eb4d = L.circleMarker(
+                [31.93161, -101.79697],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_03d4fe35b642d7c32635b35ae9584cd7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6cae9074984fb96b22c28d9e78e3e2de = $(`<div id="html_6cae9074984fb96b22c28d9e78e3e2de" style="width: 100.0%; height: 100.0%;">County: Midland County<br>Population: 183587.0<br>FRP: 0.67<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_03d4fe35b642d7c32635b35ae9584cd7.setContent(html_6cae9074984fb96b22c28d9e78e3e2de);
+            
+        
+
+        circle_marker_7c2099ae55407951fcf857e6b837eb4d.bindPopup(popup_03d4fe35b642d7c32635b35ae9584cd7)
+        ;
+
+        
+    
+    
+            var circle_marker_12e87d99885ff046c370ceae9e6deb10 = L.circleMarker(
+                [31.93322, -101.79524],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_4a72687c437935f3a0633289872684cf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_8ecba0d59221d83bcfad21e69ee69b69 = $(`<div id="html_8ecba0d59221d83bcfad21e69ee69b69" style="width: 100.0%; height: 100.0%;">County: Midland County<br>Population: 183587.0<br>FRP: 0.55<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_4a72687c437935f3a0633289872684cf.setContent(html_8ecba0d59221d83bcfad21e69ee69b69);
+            
+        
+
+        circle_marker_12e87d99885ff046c370ceae9e6deb10.bindPopup(popup_4a72687c437935f3a0633289872684cf)
+        ;
+
+        
+    
+    
+            var circle_marker_c4031508e6a4e000d37efa880ffba518 = L.circleMarker(
+                [31.9423, -94.40073],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_02e408614f2c9a51af76e4f9e815c5b8 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c0fec05e8b3c82d677ac04d0861ce115 = $(`<div id="html_c0fec05e8b3c82d677ac04d0861ce115" style="width: 100.0%; height: 100.0%;">County: Shelby County<br>Population: 24192.0<br>FRP: 0.84<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_02e408614f2c9a51af76e4f9e815c5b8.setContent(html_c0fec05e8b3c82d677ac04d0861ce115);
+            
+        
+
+        circle_marker_c4031508e6a4e000d37efa880ffba518.bindPopup(popup_02e408614f2c9a51af76e4f9e815c5b8)
+        ;
+
+        
+    
+    
+            var circle_marker_62aa02f4835de99c4199f4b18f2e9587 = L.circleMarker(
+                [32.02105, -101.99845],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_ca604900a22029452384bf32c9f55452 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_890aa64aa696b2db5e2bf17a7629784c = $(`<div id="html_890aa64aa696b2db5e2bf17a7629784c" style="width: 100.0%; height: 100.0%;">County: Midland County<br>Population: 183587.0<br>FRP: 0.93<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_ca604900a22029452384bf32c9f55452.setContent(html_890aa64aa696b2db5e2bf17a7629784c);
+            
+        
+
+        circle_marker_62aa02f4835de99c4199f4b18f2e9587.bindPopup(popup_ca604900a22029452384bf32c9f55452)
+        ;
+
+        
+    
+    
+            var circle_marker_6f38c0ad1ff6f8a6d126880d87d015da = L.circleMarker(
+                [32.0256, -101.99784],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_f5dac506581b1f640c5a91d13efe4cdf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_31c9ab326201464839e5e53311a63900 = $(`<div id="html_31c9ab326201464839e5e53311a63900" style="width: 100.0%; height: 100.0%;">County: Midland County<br>Population: 183587.0<br>FRP: 0.44<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_f5dac506581b1f640c5a91d13efe4cdf.setContent(html_31c9ab326201464839e5e53311a63900);
+            
+        
+
+        circle_marker_6f38c0ad1ff6f8a6d126880d87d015da.bindPopup(popup_f5dac506581b1f640c5a91d13efe4cdf)
+        ;
+
+        
+    
+    
+            var circle_marker_56fa3a8a0cb2c5bfc124476772cb0d1a = L.circleMarker(
+                [32.07113, -102.58868],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c7eb2104810925e4b4fd2fee8671b3ca = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_09737e607b27f1d7ca9e7ef726f405c3 = $(`<div id="html_09737e607b27f1d7ca9e7ef726f405c3" style="width: 100.0%; height: 100.0%;">County: Ector County<br>Population: 170022.0<br>FRP: 0.94<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_c7eb2104810925e4b4fd2fee8671b3ca.setContent(html_09737e607b27f1d7ca9e7ef726f405c3);
+            
+        
+
+        circle_marker_56fa3a8a0cb2c5bfc124476772cb0d1a.bindPopup(popup_c7eb2104810925e4b4fd2fee8671b3ca)
+        ;
+
+        
+    
+    
+            var circle_marker_559626f97e99bfbe0a692d26e8934aa0 = L.circleMarker(
+                [32.07935, -103.3108],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c173c3a7098b2b857cd1b7283138e22d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_668f82a3bb5b9745554dbb4b1755e6e4 = $(`<div id="html_668f82a3bb5b9745554dbb4b1755e6e4" style="width: 100.0%; height: 100.0%;">County: Lea County<br>Population: nan<br>FRP: 1.0<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_c173c3a7098b2b857cd1b7283138e22d.setContent(html_668f82a3bb5b9745554dbb4b1755e6e4);
+            
+        
+
+        circle_marker_559626f97e99bfbe0a692d26e8934aa0.bindPopup(popup_c173c3a7098b2b857cd1b7283138e22d)
+        ;
+
+        
+    
+    
+            var circle_marker_a100cbe8d50dc144f4dbeacb2169652c = L.circleMarker(
+                [32.24828, -97.55392],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c70ab1d1539c9b4d5fd1736888330328 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_781650aa0219c4a4334b177ac879b2cc = $(`<div id="html_781650aa0219c4a4334b177ac879b2cc" style="width: 100.0%; height: 100.0%;">County: Johnson County<br>Population: 210547.0<br>FRP: 2.2<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_c70ab1d1539c9b4d5fd1736888330328.setContent(html_781650aa0219c4a4334b177ac879b2cc);
+            
+        
+
+        circle_marker_a100cbe8d50dc144f4dbeacb2169652c.bindPopup(popup_c70ab1d1539c9b4d5fd1736888330328)
+        ;
+
+        
+    
+    
+            var circle_marker_144c89ce297612efb8ac00a4d5568152 = L.circleMarker(
+                [32.40771, -101.28331],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_e45f17d256315d13511ead6cdc8e1272 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d2917a29e3b3b0bcd8211632c27907b7 = $(`<div id="html_d2917a29e3b3b0bcd8211632c27907b7" style="width: 100.0%; height: 100.0%;">County: Howard County<br>Population: 30833.0<br>FRP: 0.47<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_e45f17d256315d13511ead6cdc8e1272.setContent(html_d2917a29e3b3b0bcd8211632c27907b7);
+            
+        
+
+        circle_marker_144c89ce297612efb8ac00a4d5568152.bindPopup(popup_e45f17d256315d13511ead6cdc8e1272)
+        ;
+
+        
+    
+    
+            var circle_marker_e496cd104924b68d2594da6b9b7930d1 = L.circleMarker(
+                [32.40799, -101.28406],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_d001b176d1afc7d9177421355d3b8bea = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_55b9b1670bba57f206574164cd40c409 = $(`<div id="html_55b9b1670bba57f206574164cd40c409" style="width: 100.0%; height: 100.0%;">County: Howard County<br>Population: 30833.0<br>FRP: 0.72<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_d001b176d1afc7d9177421355d3b8bea.setContent(html_55b9b1670bba57f206574164cd40c409);
+            
+        
+
+        circle_marker_e496cd104924b68d2594da6b9b7930d1.bindPopup(popup_d001b176d1afc7d9177421355d3b8bea)
+        ;
+
+        
+    
+    
+            var circle_marker_630381c0edfc1b70cf9b78f729747e7e = L.circleMarker(
+                [32.4302, -94.68393],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_177ac6ffd51b2bb9bf3b49691b6df8a6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4736664016e99400400a072bfcc6dfe8 = $(`<div id="html_4736664016e99400400a072bfcc6dfe8" style="width: 100.0%; height: 100.0%;">County: Harrison County<br>Population: 71370.0<br>FRP: 1.58<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_177ac6ffd51b2bb9bf3b49691b6df8a6.setContent(html_4736664016e99400400a072bfcc6dfe8);
+            
+        
+
+        circle_marker_630381c0edfc1b70cf9b78f729747e7e.bindPopup(popup_177ac6ffd51b2bb9bf3b49691b6df8a6)
+        ;
+
+        
+    
+    
+            var circle_marker_c6e169821b4f5c9f3a14a420de0ed86d = L.circleMarker(
+                [32.43941, -102.07616],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_312587db33bdd90ff7c87270b5d841fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c3fb0b3a9c84acc81f47cbd61bae5bc1 = $(`<div id="html_c3fb0b3a9c84acc81f47cbd61bae5bc1" style="width: 100.0%; height: 100.0%;">County: Martin County<br>Population: 5179.0<br>FRP: 0.6<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_312587db33bdd90ff7c87270b5d841fa.setContent(html_c3fb0b3a9c84acc81f47cbd61bae5bc1);
+            
+        
+
+        circle_marker_c6e169821b4f5c9f3a14a420de0ed86d.bindPopup(popup_312587db33bdd90ff7c87270b5d841fa)
+        ;
+
+        
+    
+    
+            var circle_marker_fabff3f241bfeebae228e879c0f519cf = L.circleMarker(
+                [32.45462, -97.04356],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_faccd0a9836d5a87d48eb1e4cdeabf97 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7a8d212304bce4fc99572f98030739ac = $(`<div id="html_7a8d212304bce4fc99572f98030739ac" style="width: 100.0%; height: 100.0%;">County: Ellis County<br>Population: 232387.0<br>FRP: 1.15<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_faccd0a9836d5a87d48eb1e4cdeabf97.setContent(html_7a8d212304bce4fc99572f98030739ac);
+            
+        
+
+        circle_marker_fabff3f241bfeebae228e879c0f519cf.bindPopup(popup_faccd0a9836d5a87d48eb1e4cdeabf97)
+        ;
+
+        
+    
+    
+            var circle_marker_9ff1adfb82e75db738b40cb1848e38c3 = L.circleMarker(
+                [32.45724, -97.03606],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0baa8e197e371ab64a82b74b9d955a06 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_92c62e1561dd6ca57a422f70fe2ca539 = $(`<div id="html_92c62e1561dd6ca57a422f70fe2ca539" style="width: 100.0%; height: 100.0%;">County: Ellis County<br>Population: 232387.0<br>FRP: 1.45<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_0baa8e197e371ab64a82b74b9d955a06.setContent(html_92c62e1561dd6ca57a422f70fe2ca539);
+            
+        
+
+        circle_marker_9ff1adfb82e75db738b40cb1848e38c3.bindPopup(popup_0baa8e197e371ab64a82b74b9d955a06)
+        ;
+
+        
+    
+    
+            var circle_marker_04cd67ced59dc589f4e03b92317e36ed = L.circleMarker(
+                [32.45751, -97.03826],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c647d0e03ca7c61a3a839d3ce921aabd = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_22f3f53e14439a706ab0be39671d0754 = $(`<div id="html_22f3f53e14439a706ab0be39671d0754" style="width: 100.0%; height: 100.0%;">County: Ellis County<br>Population: 232387.0<br>FRP: 2.56<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_c647d0e03ca7c61a3a839d3ce921aabd.setContent(html_22f3f53e14439a706ab0be39671d0754);
+            
+        
+
+        circle_marker_04cd67ced59dc589f4e03b92317e36ed.bindPopup(popup_c647d0e03ca7c61a3a839d3ce921aabd)
+        ;
+
+        
+    
+    
+            var circle_marker_582e8289dc595eccf691cd42bede328e = L.circleMarker(
+                [32.45784, -97.04073],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_1e97bbb6a128f14a30a6ad2271419557 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_98dade21a8929b9032d32d50aed00b5a = $(`<div id="html_98dade21a8929b9032d32d50aed00b5a" style="width: 100.0%; height: 100.0%;">County: Ellis County<br>Population: 232387.0<br>FRP: 1.45<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_1e97bbb6a128f14a30a6ad2271419557.setContent(html_98dade21a8929b9032d32d50aed00b5a);
+            
+        
+
+        circle_marker_582e8289dc595eccf691cd42bede328e.bindPopup(popup_1e97bbb6a128f14a30a6ad2271419557)
+        ;
+
+        
+    
+    
+            var circle_marker_514788c971555506e6907ddb89fdb983 = L.circleMarker(
+                [32.45813, -97.04291],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0e721259aac0534f66c3972af6b9b48e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_042e513696a0282301ef15e637de91df = $(`<div id="html_042e513696a0282301ef15e637de91df" style="width: 100.0%; height: 100.0%;">County: Ellis County<br>Population: 232387.0<br>FRP: 1.42<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_0e721259aac0534f66c3972af6b9b48e.setContent(html_042e513696a0282301ef15e637de91df);
+            
+        
+
+        circle_marker_514788c971555506e6907ddb89fdb983.bindPopup(popup_0e721259aac0534f66c3972af6b9b48e)
+        ;
+
+        
+    
+    
+            var circle_marker_78457090e0b94ed71a98b6c1aff5c2f8 = L.circleMarker(
+                [32.97548, -102.74441],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_9ff917b1b516c137d708b09a4dd659f5 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1231f4f9aacdfc165adf0b3cd1407228 = $(`<div id="html_1231f4f9aacdfc165adf0b3cd1407228" style="width: 100.0%; height: 100.0%;">County: Yoakum County<br>Population: 7581.0<br>FRP: 1.28<br>Confidence: n<br>Date: 2025-07-18<br>Time: 805</div>`)[0];
+                popup_9ff917b1b516c137d708b09a4dd659f5.setContent(html_1231f4f9aacdfc165adf0b3cd1407228);
+            
+        
+
+        circle_marker_78457090e0b94ed71a98b6c1aff5c2f8.bindPopup(popup_9ff917b1b516c137d708b09a4dd659f5)
+        ;
+
+        
+    
+    
+            var circle_marker_5c455c8eb243517942db55f6a52f74d3 = L.circleMarker(
+                [25.81298, -97.20879],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_65be5a6cc75f9ed86a52b002db828a8a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_01d559074cd41427e14536f9e3ee44fa = $(`<div id="html_01d559074cd41427e14536f9e3ee44fa" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 0.69<br>Confidence: n<br>Date: 2025-07-18<br>Time: 807</div>`)[0];
+                popup_65be5a6cc75f9ed86a52b002db828a8a.setContent(html_01d559074cd41427e14536f9e3ee44fa);
+            
+        
+
+        circle_marker_5c455c8eb243517942db55f6a52f74d3.bindPopup(popup_65be5a6cc75f9ed86a52b002db828a8a)
+        ;
+
+        
+    
+    
+            var circle_marker_a83b0718760942fce8aa09fc0645bd63 = L.circleMarker(
+                [27.03036, -103.37376],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_062ed51605128c73d07e612c1685e7d0 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_aa20420aa472bc0e353ed4a830ec1119 = $(`<div id="html_aa20420aa472bc0e353ed4a830ec1119" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 1.97<br>Confidence: n<br>Date: 2025-07-18<br>Time: 807</div>`)[0];
+                popup_062ed51605128c73d07e612c1685e7d0.setContent(html_aa20420aa472bc0e353ed4a830ec1119);
+            
+        
+
+        circle_marker_a83b0718760942fce8aa09fc0645bd63.bindPopup(popup_062ed51605128c73d07e612c1685e7d0)
+        ;
+
+        
+    
+    
+            var circle_marker_13c58e3105460cbe0855974753f64883 = L.circleMarker(
+                [28.68604, -106.09113],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_5b75789ce5ade1927633a929b6f31fa2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3eec3202cbd3ef76c0f498f7014a579b = $(`<div id="html_3eec3202cbd3ef76c0f498f7014a579b" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 2.22<br>Confidence: n<br>Date: 2025-07-18<br>Time: 945</div>`)[0];
+                popup_5b75789ce5ade1927633a929b6f31fa2.setContent(html_3eec3202cbd3ef76c0f498f7014a579b);
+            
+        
+
+        circle_marker_13c58e3105460cbe0855974753f64883.bindPopup(popup_5b75789ce5ade1927633a929b6f31fa2)
+        ;
+
+        
+    
+    
+            var circle_marker_9850729ae280b4e3105f36220ada8a4f = L.circleMarker(
+                [28.68631, -106.0864],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_67ab9b1f70332c84f06eb1cbe3cf6812 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9000514af3eb177fd3a2b0e464894ff5 = $(`<div id="html_9000514af3eb177fd3a2b0e464894ff5" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 3.46<br>Confidence: n<br>Date: 2025-07-18<br>Time: 945</div>`)[0];
+                popup_67ab9b1f70332c84f06eb1cbe3cf6812.setContent(html_9000514af3eb177fd3a2b0e464894ff5);
+            
+        
+
+        circle_marker_9850729ae280b4e3105f36220ada8a4f.bindPopup(popup_67ab9b1f70332c84f06eb1cbe3cf6812)
+        ;
+
+        
+    
+    
+            var circle_marker_d6cd2959f458a944c1dc441931c996cf = L.circleMarker(
+                [31.7963, -103.92834],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_97b95ae257f9844c335e506d727137fa = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e0993a89ad937c2eabc3c521e6e07d4a = $(`<div id="html_e0993a89ad937c2eabc3c521e6e07d4a" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 0.8<br>Confidence: n<br>Date: 2025-07-18<br>Time: 945</div>`)[0];
+                popup_97b95ae257f9844c335e506d727137fa.setContent(html_e0993a89ad937c2eabc3c521e6e07d4a);
+            
+        
+
+        circle_marker_d6cd2959f458a944c1dc441931c996cf.bindPopup(popup_97b95ae257f9844c335e506d727137fa)
+        ;
+
+        
+    
+    
+            var circle_marker_e5d44244880a5fdcd91819592bf0e058 = L.circleMarker(
+                [25.89315, -97.93529],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_e8be9ab5be0dc2aba8ba80b2328b9eac = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_18675ba0b8629c1237811c51713df15d = $(`<div id="html_18675ba0b8629c1237811c51713df15d" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 5.7<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_e8be9ab5be0dc2aba8ba80b2328b9eac.setContent(html_18675ba0b8629c1237811c51713df15d);
+            
+        
+
+        circle_marker_e5d44244880a5fdcd91819592bf0e058.bindPopup(popup_e8be9ab5be0dc2aba8ba80b2328b9eac)
+        ;
+
+        
+    
+    
+            var circle_marker_d1360460c08fdc86b00f2e33d09fa66f = L.circleMarker(
+                [26.18377, -98.51282],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_3738879a6cebe80a7347f64884cf8119 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_01f39f54d180f274555ab830d068dab8 = $(`<div id="html_01f39f54d180f274555ab830d068dab8" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 2.6<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_3738879a6cebe80a7347f64884cf8119.setContent(html_01f39f54d180f274555ab830d068dab8);
+            
+        
+
+        circle_marker_d1360460c08fdc86b00f2e33d09fa66f.bindPopup(popup_3738879a6cebe80a7347f64884cf8119)
+        ;
+
+        
+    
+    
+            var circle_marker_e1b6473af110316ddc5bad079e0e9602 = L.circleMarker(
+                [26.18849, -98.53799],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_9da8fceff19ede5938c272646afa1f12 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_572eb8b1d7d7dd8951d8d860c259d61c = $(`<div id="html_572eb8b1d7d7dd8951d8d860c259d61c" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 17.28<br>Confidence: h<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_9da8fceff19ede5938c272646afa1f12.setContent(html_572eb8b1d7d7dd8951d8d860c259d61c);
+            
+        
+
+        circle_marker_e1b6473af110316ddc5bad079e0e9602.bindPopup(popup_9da8fceff19ede5938c272646afa1f12)
+        ;
+
+        
+    
+    
+            var circle_marker_bc42594277b5791a2043da3c4dea424b = L.circleMarker(
+                [26.19246, -98.53892],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_ae7d2f24db48d89a54dfdcbad8a85418 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bda48ad9c26d0e2a514ce235fe29ffd4 = $(`<div id="html_bda48ad9c26d0e2a514ce235fe29ffd4" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 17.28<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_ae7d2f24db48d89a54dfdcbad8a85418.setContent(html_bda48ad9c26d0e2a514ce235fe29ffd4);
+            
+        
+
+        circle_marker_bc42594277b5791a2043da3c4dea424b.bindPopup(popup_ae7d2f24db48d89a54dfdcbad8a85418)
+        ;
+
+        
+    
+    
+            var circle_marker_ffec6fda0592d83720ae8d2221faee5f = L.circleMarker(
+                [26.19321, -98.5351],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_b3bdcdda9a56bdc105663ed55becc04d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_82856732b810ef25c6de9886c5d781dd = $(`<div id="html_82856732b810ef25c6de9886c5d781dd" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 17.28<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_b3bdcdda9a56bdc105663ed55becc04d.setContent(html_82856732b810ef25c6de9886c5d781dd);
+            
+        
+
+        circle_marker_ffec6fda0592d83720ae8d2221faee5f.bindPopup(popup_b3bdcdda9a56bdc105663ed55becc04d)
+        ;
+
+        
+    
+    
+            var circle_marker_edec742e005dd1ee4b0f2460d3f3de85 = L.circleMarker(
+                [26.19396, -98.53127],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_d97f3250b0a6d75c7a38b28d1be070d6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_11de1a4247f270ab179c0c8e198c041a = $(`<div id="html_11de1a4247f270ab179c0c8e198c041a" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 19.67<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_d97f3250b0a6d75c7a38b28d1be070d6.setContent(html_11de1a4247f270ab179c0c8e198c041a);
+            
+        
+
+        circle_marker_edec742e005dd1ee4b0f2460d3f3de85.bindPopup(popup_d97f3250b0a6d75c7a38b28d1be070d6)
+        ;
+
+        
+    
+    
+            var circle_marker_56f4737eefad5168c15d5a72b134c0ee = L.circleMarker(
+                [26.88941, -97.71006],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_09a50b670c43119c41453c5b1da48f54 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6325c0d2346ed8ddad958d47385d6511 = $(`<div id="html_6325c0d2346ed8ddad958d47385d6511" style="width: 100.0%; height: 100.0%;">County: Kenedy County<br>Population: 330.0<br>FRP: 11.12<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_09a50b670c43119c41453c5b1da48f54.setContent(html_6325c0d2346ed8ddad958d47385d6511);
+            
+        
+
+        circle_marker_56f4737eefad5168c15d5a72b134c0ee.bindPopup(popup_09a50b670c43119c41453c5b1da48f54)
+        ;
+
+        
+    
+    
+            var circle_marker_1b41d0d78879ecd9e50d941f2ba719ae = L.circleMarker(
+                [26.88987, -97.71195],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_ffb6f37473a0d90de82a30b118364da6 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5cd527b15c58ae84dd0884082961cf51 = $(`<div id="html_5cd527b15c58ae84dd0884082961cf51" style="width: 100.0%; height: 100.0%;">County: Kenedy County<br>Population: 330.0<br>FRP: 7.94<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_ffb6f37473a0d90de82a30b118364da6.setContent(html_5cd527b15c58ae84dd0884082961cf51);
+            
+        
+
+        circle_marker_1b41d0d78879ecd9e50d941f2ba719ae.bindPopup(popup_ffb6f37473a0d90de82a30b118364da6)
+        ;
+
+        
+    
+    
+            var circle_marker_6afb34c97f2023c9d8a7d782f7167850 = L.circleMarker(
+                [26.8908, -97.70683],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_8eeb1a246db9af40a3f8e837e0e0a4c3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_7f56186f5dd9776f3370ec94a2155fc6 = $(`<div id="html_7f56186f5dd9776f3370ec94a2155fc6" style="width: 100.0%; height: 100.0%;">County: Kenedy County<br>Population: 330.0<br>FRP: 14.66<br>Confidence: h<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_8eeb1a246db9af40a3f8e837e0e0a4c3.setContent(html_7f56186f5dd9776f3370ec94a2155fc6);
+            
+        
+
+        circle_marker_6afb34c97f2023c9d8a7d782f7167850.bindPopup(popup_8eeb1a246db9af40a3f8e837e0e0a4c3)
+        ;
+
+        
+    
+    
+            var circle_marker_aada985f9762d7ebe62547b5ff90aeb7 = L.circleMarker(
+                [26.89174, -97.70171],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_8f10c0f03d30c7934bbdd7b1e958e34e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_24af95a9f38da772b95bcef9652f1006 = $(`<div id="html_24af95a9f38da772b95bcef9652f1006" style="width: 100.0%; height: 100.0%;">County: Kenedy County<br>Population: 330.0<br>FRP: 14.66<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_8f10c0f03d30c7934bbdd7b1e958e34e.setContent(html_24af95a9f38da772b95bcef9652f1006);
+            
+        
+
+        circle_marker_aada985f9762d7ebe62547b5ff90aeb7.bindPopup(popup_8f10c0f03d30c7934bbdd7b1e958e34e)
+        ;
+
+        
+    
+    
+            var circle_marker_a4908443fa45433a73b15b117fdef963 = L.circleMarker(
+                [26.89317, -97.71091],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0f42f8ff3cb4dcf43e844a8f0cfa7558 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2969d1b3fa080c232eed39ead44e22d5 = $(`<div id="html_2969d1b3fa080c232eed39ead44e22d5" style="width: 100.0%; height: 100.0%;">County: Kenedy County<br>Population: 330.0<br>FRP: 17.38<br>Confidence: h<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_0f42f8ff3cb4dcf43e844a8f0cfa7558.setContent(html_2969d1b3fa080c232eed39ead44e22d5);
+            
+        
+
+        circle_marker_a4908443fa45433a73b15b117fdef963.bindPopup(popup_0f42f8ff3cb4dcf43e844a8f0cfa7558)
+        ;
+
+        
+    
+    
+            var circle_marker_3b83deb78baef3ff6ae8e6b9548fd4cd = L.circleMarker(
+                [27.47408, -99.62708],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_845e5a0ecea072ca92f671e507617b1f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_44bbdc086ac49dafdf80904fbf189e11 = $(`<div id="html_44bbdc086ac49dafdf80904fbf189e11" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 2.53<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_845e5a0ecea072ca92f671e507617b1f.setContent(html_44bbdc086ac49dafdf80904fbf189e11);
+            
+        
+
+        circle_marker_3b83deb78baef3ff6ae8e6b9548fd4cd.bindPopup(popup_845e5a0ecea072ca92f671e507617b1f)
+        ;
+
+        
+    
+    
+            var circle_marker_2dd9214609ddf829f6006104111901ca = L.circleMarker(
+                [27.92844, -97.61304],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_9107c6ecd409a484a5e796a37c1a593d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_545ba9abe32ed532426e0327a798c66a = $(`<div id="html_545ba9abe32ed532426e0327a798c66a" style="width: 100.0%; height: 100.0%;">County: San Patricio County<br>Population: 71467.0<br>FRP: 3.0<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_9107c6ecd409a484a5e796a37c1a593d.setContent(html_545ba9abe32ed532426e0327a798c66a);
+            
+        
+
+        circle_marker_2dd9214609ddf829f6006104111901ca.bindPopup(popup_9107c6ecd409a484a5e796a37c1a593d)
+        ;
+
+        
+    
+    
+            var circle_marker_c43f5586a0ff65a5c6acbc129f7f54f4 = L.circleMarker(
+                [28.05818, -97.43684],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_89f22d0f6dc51a347d3342f45dd91ae3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_fbe5230b5d55aa9e01c3fc85e4072cdf = $(`<div id="html_fbe5230b5d55aa9e01c3fc85e4072cdf" style="width: 100.0%; height: 100.0%;">County: San Patricio County<br>Population: 71467.0<br>FRP: 7.4<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_89f22d0f6dc51a347d3342f45dd91ae3.setContent(html_fbe5230b5d55aa9e01c3fc85e4072cdf);
+            
+        
+
+        circle_marker_c43f5586a0ff65a5c6acbc129f7f54f4.bindPopup(popup_89f22d0f6dc51a347d3342f45dd91ae3)
+        ;
+
+        
+    
+    
+            var circle_marker_e98ed4b9dd6f3be55d07a06c0360c6e0 = L.circleMarker(
+                [29.00048, -100.64146],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c4537550ac4e45ee536650f69039cf48 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_034d02dfa07ee55c322a91b004dd4596 = $(`<div id="html_034d02dfa07ee55c322a91b004dd4596" style="width: 100.0%; height: 100.0%;">County: Maverick County<br>Population: 58829.0<br>FRP: 4.83<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_c4537550ac4e45ee536650f69039cf48.setContent(html_034d02dfa07ee55c322a91b004dd4596);
+            
+        
+
+        circle_marker_e98ed4b9dd6f3be55d07a06c0360c6e0.bindPopup(popup_c4537550ac4e45ee536650f69039cf48)
+        ;
+
+        
+    
+    
+            var circle_marker_819714ab09e4c22e0c7a966f469e52ff = L.circleMarker(
+                [29.11723, -96.71922],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_b03446982c6e96622d49216665a7e79a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0aebe1bdd77db35e58c46bf1ade5f5a3 = $(`<div id="html_0aebe1bdd77db35e58c46bf1ade5f5a3" style="width: 100.0%; height: 100.0%;">County: Jackson County<br>Population: 15284.0<br>FRP: 3.49<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_b03446982c6e96622d49216665a7e79a.setContent(html_0aebe1bdd77db35e58c46bf1ade5f5a3);
+            
+        
+
+        circle_marker_819714ab09e4c22e0c7a966f469e52ff.bindPopup(popup_b03446982c6e96622d49216665a7e79a)
+        ;
+
+        
+    
+    
+            var circle_marker_4c60044ca6893842d1b09ad927452c6f = L.circleMarker(
+                [29.53315, -99.83876],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_436ee2088f7816ba621d5e67612dac64 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cd1407b22e75ddfd6a0d3ae49779df5c = $(`<div id="html_cd1407b22e75ddfd6a0d3ae49779df5c" style="width: 100.0%; height: 100.0%;">County: Uvalde County<br>Population: 25138.0<br>FRP: 2.09<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_436ee2088f7816ba621d5e67612dac64.setContent(html_cd1407b22e75ddfd6a0d3ae49779df5c);
+            
+        
+
+        circle_marker_4c60044ca6893842d1b09ad927452c6f.bindPopup(popup_436ee2088f7816ba621d5e67612dac64)
+        ;
+
+        
+    
+    
+            var circle_marker_7c4b6eb6d65119e3e5b9892390a53bfd = L.circleMarker(
+                [29.57752, -98.0302],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_bb510eb304cc75c69b9611af10ae7880 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_bd884b8307fbe6315607539f0e031e36 = $(`<div id="html_bd884b8307fbe6315607539f0e031e36" style="width: 100.0%; height: 100.0%;">County: Guadalupe County<br>Population: 195166.0<br>FRP: 5.05<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1921</div>`)[0];
+                popup_bb510eb304cc75c69b9611af10ae7880.setContent(html_bd884b8307fbe6315607539f0e031e36);
+            
+        
+
+        circle_marker_7c4b6eb6d65119e3e5b9892390a53bfd.bindPopup(popup_bb510eb304cc75c69b9611af10ae7880)
+        ;
+
+        
+    
+    
+            var circle_marker_f11d626b5c72ff3eb2960e26f6e7e31f = L.circleMarker(
+                [30.14711, -106.18929],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_b6cac08e9de261ad9d004e3febc7f00b = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9e4f72dd386f60e9b6022f4f7194213a = $(`<div id="html_9e4f72dd386f60e9b6022f4f7194213a" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 24.2<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_b6cac08e9de261ad9d004e3febc7f00b.setContent(html_9e4f72dd386f60e9b6022f4f7194213a);
+            
+        
+
+        circle_marker_f11d626b5c72ff3eb2960e26f6e7e31f.bindPopup(popup_b6cac08e9de261ad9d004e3febc7f00b)
+        ;
+
+        
+    
+    
+            var circle_marker_78e446d1a7a92b7a58ff77e649359342 = L.circleMarker(
+                [30.14827, -106.1847],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_84309488797911c131ee1ce4e8a3d0f3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c08e5341d268e7736321d147597ad9b7 = $(`<div id="html_c08e5341d268e7736321d147597ad9b7" style="width: 100.0%; height: 100.0%;">County: nan<br>Population: nan<br>FRP: 27.99<br>Confidence: h<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_84309488797911c131ee1ce4e8a3d0f3.setContent(html_c08e5341d268e7736321d147597ad9b7);
+            
+        
+
+        circle_marker_78e446d1a7a92b7a58ff77e649359342.bindPopup(popup_84309488797911c131ee1ce4e8a3d0f3)
+        ;
+
+        
+    
+    
+            var circle_marker_6ed4dd2bd79c1fc6f1cf98ffd78e896c = L.circleMarker(
+                [30.26611, -99.214],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_adf517c6c1705a14b1b80c12fd123c69 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_c7b2919c13b5b92141de1dce53866801 = $(`<div id="html_c7b2919c13b5b92141de1dce53866801" style="width: 100.0%; height: 100.0%;">County: Gillespie County<br>Population: 28159.0<br>FRP: 6.48<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_adf517c6c1705a14b1b80c12fd123c69.setContent(html_c7b2919c13b5b92141de1dce53866801);
+            
+        
+
+        circle_marker_6ed4dd2bd79c1fc6f1cf98ffd78e896c.bindPopup(popup_adf517c6c1705a14b1b80c12fd123c69)
+        ;
+
+        
+    
+    
+            var circle_marker_4b4b8985cc8e2a07c376bd960684328b = L.circleMarker(
+                [30.26888, -99.22046],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_7d4d5eac45a67fe7458ec249785f13a3 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9023b764c07de4582f3aa48ad057bfb7 = $(`<div id="html_9023b764c07de4582f3aa48ad057bfb7" style="width: 100.0%; height: 100.0%;">County: Gillespie County<br>Population: 28159.0<br>FRP: 5.35<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_7d4d5eac45a67fe7458ec249785f13a3.setContent(html_9023b764c07de4582f3aa48ad057bfb7);
+            
+        
+
+        circle_marker_4b4b8985cc8e2a07c376bd960684328b.bindPopup(popup_7d4d5eac45a67fe7458ec249785f13a3)
+        ;
+
+        
+    
+    
+            var circle_marker_281ba0eea7ab1b4091ad662adea41033 = L.circleMarker(
+                [30.26994, -99.21498],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_91868a874e72221cab099e604e4a208a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d7b288094e0185a5551e8cde98ec1b04 = $(`<div id="html_d7b288094e0185a5551e8cde98ec1b04" style="width: 100.0%; height: 100.0%;">County: Gillespie County<br>Population: 28159.0<br>FRP: 6.48<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_91868a874e72221cab099e604e4a208a.setContent(html_d7b288094e0185a5551e8cde98ec1b04);
+            
+        
+
+        circle_marker_281ba0eea7ab1b4091ad662adea41033.bindPopup(popup_91868a874e72221cab099e604e4a208a)
+        ;
+
+        
+    
+    
+            var circle_marker_6fe6daa0d0f4706ce79621206a3702be = L.circleMarker(
+                [30.54675, -100.26221],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_e17f5e81fa08de1b61c46d8ddbeb6de1 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_4d4b716b270fe55bd335a15b8564e0fa = $(`<div id="html_4d4b716b270fe55bd335a15b8564e0fa" style="width: 100.0%; height: 100.0%;">County: Sutton County<br>Population: 3269.0<br>FRP: 3.9<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_e17f5e81fa08de1b61c46d8ddbeb6de1.setContent(html_4d4b716b270fe55bd335a15b8564e0fa);
+            
+        
+
+        circle_marker_6fe6daa0d0f4706ce79621206a3702be.bindPopup(popup_e17f5e81fa08de1b61c46d8ddbeb6de1)
+        ;
+
+        
+    
+    
+            var circle_marker_7759e9aee18a5fcef4580ea6a6436aa1 = L.circleMarker(
+                [31.00191, -102.28772],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_b3d2cc1813470373f2707a340e66f25f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_af9d0659465a1478b7b809a360da66f3 = $(`<div id="html_af9d0659465a1478b7b809a360da66f3" style="width: 100.0%; height: 100.0%;">County: Pecos County<br>Population: 14712.0<br>FRP: 4.22<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_b3d2cc1813470373f2707a340e66f25f.setContent(html_af9d0659465a1478b7b809a360da66f3);
+            
+        
+
+        circle_marker_7759e9aee18a5fcef4580ea6a6436aa1.bindPopup(popup_b3d2cc1813470373f2707a340e66f25f)
+        ;
+
+        
+    
+    
+            var circle_marker_163077fb86a0adc7d24ca52ecf048f52 = L.circleMarker(
+                [31.01197, -102.28516],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_51b09c218de20901641f1c19b37eb53f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_83800df3da95d47554775da9a87946aa = $(`<div id="html_83800df3da95d47554775da9a87946aa" style="width: 100.0%; height: 100.0%;">County: Pecos County<br>Population: 14712.0<br>FRP: 2.15<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_51b09c218de20901641f1c19b37eb53f.setContent(html_83800df3da95d47554775da9a87946aa);
+            
+        
+
+        circle_marker_163077fb86a0adc7d24ca52ecf048f52.bindPopup(popup_51b09c218de20901641f1c19b37eb53f)
+        ;
+
+        
+    
+    
+            var circle_marker_45e28db4b64847ec9b07101fc874c267 = L.circleMarker(
+                [31.45737, -103.50304],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_ccbcf502555c7f665a55434a94c3519a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_eeacbb82ee37bb39c8dfe11e79bae45c = $(`<div id="html_eeacbb82ee37bb39c8dfe11e79bae45c" style="width: 100.0%; height: 100.0%;">County: Reeves County<br>Population: 11956.0<br>FRP: 18.35<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_ccbcf502555c7f665a55434a94c3519a.setContent(html_eeacbb82ee37bb39c8dfe11e79bae45c);
+            
+        
+
+        circle_marker_45e28db4b64847ec9b07101fc874c267.bindPopup(popup_ccbcf502555c7f665a55434a94c3519a)
+        ;
+
+        
+    
+    
+            var circle_marker_f2d2fc817d8a5bd9177fbb555cc56922 = L.circleMarker(
+                [31.48163, -101.83475],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_f115eb02a3504fa739a436881cbb6940 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6cc051753e7b1b57c9976d5c2828565a = $(`<div id="html_6cc051753e7b1b57c9976d5c2828565a" style="width: 100.0%; height: 100.0%;">County: Upton County<br>Population: 3128.0<br>FRP: 4.65<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_f115eb02a3504fa739a436881cbb6940.setContent(html_6cc051753e7b1b57c9976d5c2828565a);
+            
+        
+
+        circle_marker_f2d2fc817d8a5bd9177fbb555cc56922.bindPopup(popup_f115eb02a3504fa739a436881cbb6940)
+        ;
+
+        
+    
+    
+            var circle_marker_4e1cc13d20bf950caae61e01a729610d = L.circleMarker(
+                [31.5908, -102.93111],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_01e29fea3814884c70e699d5704b2c48 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_42b0060ccd6bdc4bdc663e87e5d51ac4 = $(`<div id="html_42b0060ccd6bdc4bdc663e87e5d51ac4" style="width: 100.0%; height: 100.0%;">County: Ward County<br>Population: 11038.0<br>FRP: 6.33<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_01e29fea3814884c70e699d5704b2c48.setContent(html_42b0060ccd6bdc4bdc663e87e5d51ac4);
+            
+        
+
+        circle_marker_4e1cc13d20bf950caae61e01a729610d.bindPopup(popup_01e29fea3814884c70e699d5704b2c48)
+        ;
+
+        
+    
+    
+            var circle_marker_67aa8c4d679e9bb19f29ea3ed56929f4 = L.circleMarker(
+                [31.85673, -99.08233],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_9e3167a367596aa442ce939e9662b44d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2675b9ba7fd1a0821608aa7a01386f43 = $(`<div id="html_2675b9ba7fd1a0821608aa7a01386f43" style="width: 100.0%; height: 100.0%;">County: Brown County<br>Population: 38631.0<br>FRP: 3.35<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_9e3167a367596aa442ce939e9662b44d.setContent(html_2675b9ba7fd1a0821608aa7a01386f43);
+            
+        
+
+        circle_marker_67aa8c4d679e9bb19f29ea3ed56929f4.bindPopup(popup_9e3167a367596aa442ce939e9662b44d)
+        ;
+
+        
+    
+    
+            var circle_marker_1f68b6e1f58e5665459896f795cca891 = L.circleMarker(
+                [31.86043, -99.08332],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_37859e82f36b02c6b05dc2748d32499c = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6f543c46e0a0281d9eaca82013873e2f = $(`<div id="html_6f543c46e0a0281d9eaca82013873e2f" style="width: 100.0%; height: 100.0%;">County: Brown County<br>Population: 38631.0<br>FRP: 5.82<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_37859e82f36b02c6b05dc2748d32499c.setContent(html_6f543c46e0a0281d9eaca82013873e2f);
+            
+        
+
+        circle_marker_1f68b6e1f58e5665459896f795cca891.bindPopup(popup_37859e82f36b02c6b05dc2748d32499c)
+        ;
+
+        
+    
+    
+            var circle_marker_02d4897bb67883db085573f34e6fe062 = L.circleMarker(
+                [31.86116, -99.08075],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_8d9b189d22828698fac86eed5dd4c5ce = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_e9f5d54ab727189668f10b58efac771d = $(`<div id="html_e9f5d54ab727189668f10b58efac771d" style="width: 100.0%; height: 100.0%;">County: Brown County<br>Population: 38631.0<br>FRP: 3.03<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_8d9b189d22828698fac86eed5dd4c5ce.setContent(html_e9f5d54ab727189668f10b58efac771d);
+            
+        
+
+        circle_marker_02d4897bb67883db085573f34e6fe062.bindPopup(popup_8d9b189d22828698fac86eed5dd4c5ce)
+        ;
+
+        
+    
+    
+            var circle_marker_8e1b885e1359960b58d75ae497ce592e = L.circleMarker(
+                [32.45754, -97.03703],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_e97e6628741a4bf314e0217426d9a898 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_0d08042379dd11d7b615e4d5c3f14116 = $(`<div id="html_0d08042379dd11d7b615e4d5c3f14116" style="width: 100.0%; height: 100.0%;">County: Ellis County<br>Population: 232387.0<br>FRP: 8.24<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_e97e6628741a4bf314e0217426d9a898.setContent(html_0d08042379dd11d7b615e4d5c3f14116);
+            
+        
+
+        circle_marker_8e1b885e1359960b58d75ae497ce592e.bindPopup(popup_e97e6628741a4bf314e0217426d9a898)
+        ;
+
+        
+    
+    
+            var circle_marker_0494c2641e1fe12fa78e532f583140e5 = L.circleMarker(
+                [32.64328, -93.53833],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_60301608605fb24e0bbfbf4cfbab60a9 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_3b25fb136d4cb9dd6394e8f41a0bf8b2 = $(`<div id="html_3b25fb136d4cb9dd6394e8f41a0bf8b2" style="width: 100.0%; height: 100.0%;">County: Bossier Parish<br>Population: nan<br>FRP: 2.59<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_60301608605fb24e0bbfbf4cfbab60a9.setContent(html_3b25fb136d4cb9dd6394e8f41a0bf8b2);
+            
+        
+
+        circle_marker_0494c2641e1fe12fa78e532f583140e5.bindPopup(popup_60301608605fb24e0bbfbf4cfbab60a9)
+        ;
+
+        
+    
+    
+            var circle_marker_31755fb5904f147de8a28dfeaf916045 = L.circleMarker(
+                [32.65269, -101.14395],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_e173e1b655b347dceeb6357ff1d1cb80 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1deb4743ed0d3bbceef0e713b15198b7 = $(`<div id="html_1deb4743ed0d3bbceef0e713b15198b7" style="width: 100.0%; height: 100.0%;">County: Scurry County<br>Population: 16211.0<br>FRP: 3.89<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_e173e1b655b347dceeb6357ff1d1cb80.setContent(html_1deb4743ed0d3bbceef0e713b15198b7);
+            
+        
+
+        circle_marker_31755fb5904f147de8a28dfeaf916045.bindPopup(popup_e173e1b655b347dceeb6357ff1d1cb80)
+        ;
+
+        
+    
+    
+            var circle_marker_2f4c101082415de0d07f988c17be7599 = L.circleMarker(
+                [32.65673, -101.1451],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_0f6495fb4e9c8ef4ab0ce2f9b951471d = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_ea561b370f0787a2c6f5bef8fa56b431 = $(`<div id="html_ea561b370f0787a2c6f5bef8fa56b431" style="width: 100.0%; height: 100.0%;">County: Scurry County<br>Population: 16211.0<br>FRP: 3.89<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_0f6495fb4e9c8ef4ab0ce2f9b951471d.setContent(html_ea561b370f0787a2c6f5bef8fa56b431);
+            
+        
+
+        circle_marker_2f4c101082415de0d07f988c17be7599.bindPopup(popup_0f6495fb4e9c8ef4ab0ce2f9b951471d)
+        ;
+
+        
+    
+    
+            var circle_marker_a7aff01ecce213e0e114b0bf177fd20e = L.circleMarker(
+                [32.65922, -96.44662],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_4b4a7d9687ae847165ddfc681925402e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2f3beb6a1378c37c08782b86548fd730 = $(`<div id="html_2f3beb6a1378c37c08782b86548fd730" style="width: 100.0%; height: 100.0%;">County: Kaufman County<br>Population: 197829.0<br>FRP: 4.99<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_4b4a7d9687ae847165ddfc681925402e.setContent(html_2f3beb6a1378c37c08782b86548fd730);
+            
+        
+
+        circle_marker_a7aff01ecce213e0e114b0bf177fd20e.bindPopup(popup_4b4a7d9687ae847165ddfc681925402e)
+        ;
+
+        
+    
+    
+            var circle_marker_5d0dccdc56424b8506c193f3b47b5b6f = L.circleMarker(
+                [32.73387, -98.90133],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_e05683f59121111e520f4684e0c191fb = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_9d5bfaca8177d7ac446ff708d7b5e688 = $(`<div id="html_9d5bfaca8177d7ac446ff708d7b5e688" style="width: 100.0%; height: 100.0%;">County: Stephens County<br>Population: 9475.0<br>FRP: 10.2<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_e05683f59121111e520f4684e0c191fb.setContent(html_9d5bfaca8177d7ac446ff708d7b5e688);
+            
+        
+
+        circle_marker_5d0dccdc56424b8506c193f3b47b5b6f.bindPopup(popup_e05683f59121111e520f4684e0c191fb)
+        ;
+
+        
+    
+    
+            var circle_marker_1893e1afcb6f11351fd7916bdeda5f9a = L.circleMarker(
+                [32.7348, -98.89629],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_7e76267b82108f863c8d308be01fbd6a = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_32cdd02a711daa4dfcdf623f18eb9b64 = $(`<div id="html_32cdd02a711daa4dfcdf623f18eb9b64" style="width: 100.0%; height: 100.0%;">County: Stephens County<br>Population: 9475.0<br>FRP: 10.2<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_7e76267b82108f863c8d308be01fbd6a.setContent(html_32cdd02a711daa4dfcdf623f18eb9b64);
+            
+        
+
+        circle_marker_1893e1afcb6f11351fd7916bdeda5f9a.bindPopup(popup_7e76267b82108f863c8d308be01fbd6a)
+        ;
+
+        
+    
+    
+            var circle_marker_8ea9fe19a17d80ad8b75d5c3b9b1bfe9 = L.circleMarker(
+                [32.94156, -98.58981],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_c3bd91917ce11feecceaab2cbea1c4a7 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_5d5f44183f93be1c4180e32a1e390c5b = $(`<div id="html_5d5f44183f93be1c4180e32a1e390c5b" style="width: 100.0%; height: 100.0%;">County: Stephens County<br>Population: 9475.0<br>FRP: 5.26<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_c3bd91917ce11feecceaab2cbea1c4a7.setContent(html_5d5f44183f93be1c4180e32a1e390c5b);
+            
+        
+
+        circle_marker_8ea9fe19a17d80ad8b75d5c3b9b1bfe9.bindPopup(popup_c3bd91917ce11feecceaab2cbea1c4a7)
+        ;
+
+        
+    
+    
+            var circle_marker_037341b92386a30266dab782949298bb = L.circleMarker(
+                [32.9421, -98.59277],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_784b1fe0d6df7dd9b152257663aeafcf = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_cb1a7c9b1391711949478570d79fcb33 = $(`<div id="html_cb1a7c9b1391711949478570d79fcb33" style="width: 100.0%; height: 100.0%;">County: Stephens County<br>Population: 9475.0<br>FRP: 6.09<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_784b1fe0d6df7dd9b152257663aeafcf.setContent(html_cb1a7c9b1391711949478570d79fcb33);
+            
+        
+
+        circle_marker_037341b92386a30266dab782949298bb.bindPopup(popup_784b1fe0d6df7dd9b152257663aeafcf)
+        ;
+
+        
+    
+    
+            var circle_marker_d08bea8d506113de89ac2cf6113a5088 = L.circleMarker(
+                [33.03798, -99.04784],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_d0bea23bf084b880ccf078615b247f57 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_d6f90b0fd4f8539a26ae615e14862100 = $(`<div id="html_d6f90b0fd4f8539a26ae615e14862100" style="width: 100.0%; height: 100.0%;">County: Throckmorton County<br>Population: 1532.0<br>FRP: 7.39<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_d0bea23bf084b880ccf078615b247f57.setContent(html_d6f90b0fd4f8539a26ae615e14862100);
+            
+        
+
+        circle_marker_d08bea8d506113de89ac2cf6113a5088.bindPopup(popup_d0bea23bf084b880ccf078615b247f57)
+        ;
+
+        
+    
+    
+            var circle_marker_0e17240a511c38c0936204890e4e26f4 = L.circleMarker(
+                [33.42076, -94.00294],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_8bb06f97faab93b05a3ab0b2838b38d4 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_07556c8aca1748bdf30b76dcc949fbb9 = $(`<div id="html_07556c8aca1748bdf30b76dcc949fbb9" style="width: 100.0%; height: 100.0%;">County: Miller County<br>Population: nan<br>FRP: 6.89<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_8bb06f97faab93b05a3ab0b2838b38d4.setContent(html_07556c8aca1748bdf30b76dcc949fbb9);
+            
+        
+
+        circle_marker_0e17240a511c38c0936204890e4e26f4.bindPopup(popup_8bb06f97faab93b05a3ab0b2838b38d4)
+        ;
+
+        
+    
+    
+            var circle_marker_73bc8ddae0cae80e20b10ef7e43259f5 = L.circleMarker(
+                [33.44148, -93.78683],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_f9460c083d1f0e47d93f22ba422a46da = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_1e24934108dca5f07416238e5be34059 = $(`<div id="html_1e24934108dca5f07416238e5be34059" style="width: 100.0%; height: 100.0%;">County: Miller County<br>Population: nan<br>FRP: 7.38<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_f9460c083d1f0e47d93f22ba422a46da.setContent(html_1e24934108dca5f07416238e5be34059);
+            
+        
+
+        circle_marker_73bc8ddae0cae80e20b10ef7e43259f5.bindPopup(popup_f9460c083d1f0e47d93f22ba422a46da)
+        ;
+
+        
+    
+    
+            var circle_marker_f01b212924fc69b86c05393d3d1d1e33 = L.circleMarker(
+                [33.59073, -105.1357],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_a607534888694e8f1e19f43992dcf2d2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_20513de5fd5985fdc88754a5f19c2d24 = $(`<div id="html_20513de5fd5985fdc88754a5f19c2d24" style="width: 100.0%; height: 100.0%;">County: Lincoln County<br>Population: nan<br>FRP: 2.09<br>Confidence: l<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_a607534888694e8f1e19f43992dcf2d2.setContent(html_20513de5fd5985fdc88754a5f19c2d24);
+            
+        
+
+        circle_marker_f01b212924fc69b86c05393d3d1d1e33.bindPopup(popup_a607534888694e8f1e19f43992dcf2d2)
+        ;
+
+        
+    
+    
+            var circle_marker_dbca0f559a6c20b80037f8aba9a7e662 = L.circleMarker(
+                [35.15412, -94.12451],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_8cbf23fdca93d752fca0b10706a5ac9f = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_2273a3827bcf81ec32607d8c915d7b07 = $(`<div id="html_2273a3827bcf81ec32607d8c915d7b07" style="width: 100.0%; height: 100.0%;">County: Sebastian County<br>Population: nan<br>FRP: 1.73<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_8cbf23fdca93d752fca0b10706a5ac9f.setContent(html_2273a3827bcf81ec32607d8c915d7b07);
+            
+        
+
+        circle_marker_dbca0f559a6c20b80037f8aba9a7e662.bindPopup(popup_8cbf23fdca93d752fca0b10706a5ac9f)
+        ;
+
+        
+    
+    
+            var circle_marker_96b3b4d4e0e3bb99e063fda0c264e213 = L.circleMarker(
+                [35.4039, -93.85931],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_53e5f82e9c5bd43c5147d9ab17a590ab = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_f4aa53f35d53b208bd978cdd33eb6d1e = $(`<div id="html_f4aa53f35d53b208bd978cdd33eb6d1e" style="width: 100.0%; height: 100.0%;">County: Franklin County<br>Population: nan<br>FRP: 2.61<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_53e5f82e9c5bd43c5147d9ab17a590ab.setContent(html_f4aa53f35d53b208bd978cdd33eb6d1e);
+            
+        
+
+        circle_marker_96b3b4d4e0e3bb99e063fda0c264e213.bindPopup(popup_53e5f82e9c5bd43c5147d9ab17a590ab)
+        ;
+
+        
+    
+    
+            var circle_marker_153dda8a87fc096d15986fc6c0f9d5f5 = L.circleMarker(
+                [35.51292, -101.40838],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_79b2265a2492446cc0a192fdcf35443e = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_6055748ba402827b21627debb000a9f8 = $(`<div id="html_6055748ba402827b21627debb000a9f8" style="width: 100.0%; height: 100.0%;">County: Carson County<br>Population: 5822.0<br>FRP: 4.41<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_79b2265a2492446cc0a192fdcf35443e.setContent(html_6055748ba402827b21627debb000a9f8);
+            
+        
+
+        circle_marker_153dda8a87fc096d15986fc6c0f9d5f5.bindPopup(popup_79b2265a2492446cc0a192fdcf35443e)
+        ;
+
+        
+    
+    
+            var circle_marker_002c8b6f6aab247b57a77e96cfc0f86c = L.circleMarker(
+                [36.01201, -94.50152],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(feature_group_e91d8862526ae10fdc0d135d14e5fcf6);
+        
+    
+        var popup_5c8ed62f2e32f2a566ac96bd619cfdc2 = L.popup({"maxWidth": 300});
+
+        
+            
+                var html_dc685e1963ed9d1daaac19d9882e67d7 = $(`<div id="html_dc685e1963ed9d1daaac19d9882e67d7" style="width: 100.0%; height: 100.0%;">County: Washington County<br>Population: nan<br>FRP: 1.45<br>Confidence: n<br>Date: 2025-07-18<br>Time: 1923</div>`)[0];
+                popup_5c8ed62f2e32f2a566ac96bd619cfdc2.setContent(html_dc685e1963ed9d1daaac19d9882e67d7);
+            
+        
+
+        circle_marker_002c8b6f6aab247b57a77e96cfc0f86c.bindPopup(popup_5c8ed62f2e32f2a566ac96bd619cfdc2)
+        ;
+
+        
+    
+    
+            feature_group_e91d8862526ae10fdc0d135d14e5fcf6.addTo(map_fc04aada060905cab49ab8def3eb60f5);
+        
+    
+            var heat_map_e6f757961e2b415eaebe574cd5d511f6 = L.heatLayer(
+                [[33.04668, -93.50953], [33.25376, -94.07058], [33.6077, -93.792], [33.97394, -94.62115], [33.99615, -94.58606], [34.30645, -97.49235], [34.60844, -94.40182], [27.82175, -97.20939], [27.89, -97.27435], [28.06002, -97.4379], [28.32215, -99.26835], [28.35526, -98.56243], [28.78731, -99.42777], [29.57567, -98.03356], [29.57647, -98.03088], [29.57709, -98.03548], [30.26717, -99.21115], [30.26837, -99.2121], [30.5371, -100.16579], [30.54405, -100.26343], [30.5445, -100.26744], [31.04004, -102.22463], [31.25642, -101.25716], [31.31164, -101.72695], [31.36211, -101.78192], [31.4984, -103.5332], [31.70762, -97.59212], [31.79603, -103.92977], [31.80948, -103.90384], [31.8473, -101.77133], [31.84904, -103.94869], [31.84909, -96.39501], [31.86025, -101.76437], [31.92418, -104.02224], [31.93161, -101.79697], [31.93322, -101.79524], [31.9423, -94.40073], [32.02105, -101.99845], [32.0256, -101.99784], [32.07113, -102.58868], [32.07935, -103.3108], [32.24828, -97.55392], [32.40771, -101.28331], [32.40799, -101.28406], [32.4302, -94.68393], [32.43941, -102.07616], [32.45462, -97.04356], [32.45724, -97.03606], [32.45751, -97.03826], [32.45784, -97.04073], [32.45813, -97.04291], [32.97548, -102.74441], [25.81298, -97.20879], [27.03036, -103.37376], [28.68604, -106.09113], [28.68631, -106.0864], [31.7963, -103.92834], [25.89315, -97.93529], [26.18377, -98.51282], [26.18849, -98.53799], [26.19246, -98.53892], [26.19321, -98.5351], [26.19396, -98.53127], [26.88941, -97.71006], [26.88987, -97.71195], [26.8908, -97.70683], [26.89174, -97.70171], [26.89317, -97.71091], [27.47408, -99.62708], [27.92844, -97.61304], [28.05818, -97.43684], [29.00048, -100.64146], [29.11723, -96.71922], [29.53315, -99.83876], [29.57752, -98.0302], [30.14711, -106.18929], [30.14827, -106.1847], [30.26611, -99.214], [30.26888, -99.22046], [30.26994, -99.21498], [30.54675, -100.26221], [31.00191, -102.28772], [31.01197, -102.28516], [31.45737, -103.50304], [31.48163, -101.83475], [31.5908, -102.93111], [31.85673, -99.08233], [31.86043, -99.08332], [31.86116, -99.08075], [32.45754, -97.03703], [32.64328, -93.53833], [32.65269, -101.14395], [32.65673, -101.1451], [32.65922, -96.44662], [32.73387, -98.90133], [32.7348, -98.89629], [32.94156, -98.58981], [32.9421, -98.59277], [33.03798, -99.04784], [33.42076, -94.00294], [33.44148, -93.78683], [33.59073, -105.1357], [35.15412, -94.12451], [35.4039, -93.85931], [35.51292, -101.40838], [36.01201, -94.50152]],
+                {"blur": 10, "maxZoom": 18, "minOpacity": 0.3, "radius": 15}
+            );
+        
+    
+            heat_map_e6f757961e2b415eaebe574cd5d511f6.addTo(map_fc04aada060905cab49ab8def3eb60f5);
+        
+    
+            var layer_control_ebc76819479ecd85a2ff5239af809876_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_78fe36980c3fbf3dcb40c413ac0c643e,
+                },
+                overlays :  {
+                    "Fires by Confidence" : feature_group_e91d8862526ae10fdc0d135d14e5fcf6,
+                    "Fire Density Heatmap" : heat_map_e6f757961e2b415eaebe574cd5d511f6,
+                },
+            };
+            let layer_control_ebc76819479ecd85a2ff5239af809876 = L.control.layers(
+                layer_control_ebc76819479ecd85a2ff5239af809876_layers.base_layers,
+                layer_control_ebc76819479ecd85a2ff5239af809876_layers.overlays,
+                {"autoZIndex": true, "collapsed": true, "position": "topright"}
+            ).addTo(map_fc04aada060905cab49ab8def3eb60f5);
+
+        
+</script>
+</html>
